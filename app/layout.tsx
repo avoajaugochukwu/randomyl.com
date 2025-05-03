@@ -41,7 +41,7 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-        <GoogleAnalytics gaId="G-JP8B4NF8W2" />
+        <GoogleAnalytics gaId="G-6M5JV3JERT" />
       </body>
     </html>
   );
