@@ -2,6 +2,7 @@
 import { MetadataRoute } from 'next'
 import { fetchPages } from '@/lib/notion'
 import { baseUrl } from './metadata';
+import { tools } from './config/tools';
 
 // Define static routes directly
 const staticRoutes = [
@@ -39,6 +40,15 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: path === '/' ? 1.0 : 0.8, // Give homepage highest priority
   }));
 
+  // Generate URLs for tools
+
+  const toolUrls = tools.map((tool: any) => ({
+    url: `${baseUrl}/tools/${tool.route}`,
+    lastModified: formattedDate,
+    changeFrequency: 'monthly' as const,
+    priority: 0.9,
+  }));
+
   // Combine static and dynamic URLs
-  return [...routeUrls, ...blogUrls];
+  return [...routeUrls, ...blogUrls, ...toolUrls];
 } 

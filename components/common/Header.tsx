@@ -22,6 +22,12 @@ export function Header() {
             Home
           </Link>
           <Link
+            href="/tools"
+            className="transition-colors hover:text-foreground/80 text-foreground/60"
+          >
+            Tools
+          </Link>
+          <Link
             href="/blog"
             className="transition-colors hover:text-foreground/80 text-foreground" // Example: Highlight current section
           >
