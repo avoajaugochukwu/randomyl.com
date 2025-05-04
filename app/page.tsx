@@ -3,6 +3,7 @@ import { fetchPages } from "@/lib/notion";
 import Link from 'next/link';
 import { format } from 'date-fns';
 import { BlogPostCard } from "@/components/BlogPostCard";
+import Hero from "@/components/common/Hero";
 
 export default async function Home() {
   const pages = await fetchPages();
@@ -49,18 +50,10 @@ export default async function Home() {
 
   return (
     <div className="container mx-auto px-4 py-16 md:py-20 lg:py-24">
-      <section className="text-center mb-20 md:mb-24 lg:mb-28">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl mb-6">
-            <span className="bg-gradient-to-r from-primary via-pink-500 to-secondary bg-clip-text text-transparent">
-              Generate Random Data Instantly
-            </span>
-          </h1>
-          <p className="text-lg md:text-xl lg:text-2xl text-muted-foreground mb-8">
-            Stop wasting time. Generate random data in seconds. Focus on what you do best.
-          </p>
-        </div>
-      </section>
+      <Hero
+        title="Generate Random Data Instantly"
+        description="Stop wasting time. Generate random data in seconds. Focus on what you do best."
+      />
 
       <section>
         <h2 className="text-3xl font-bold text-center mb-10 md:mb-12">
