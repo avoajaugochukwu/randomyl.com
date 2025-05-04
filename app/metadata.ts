@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 
-export const baseUrl = 'https://randomyl.com/';
+export const baseUrl = 'https://randomyl.com';
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
