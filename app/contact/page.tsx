@@ -14,7 +14,7 @@ export default function ContactPage() {
       <div className="text-center space-y-4 mb-12">
         <h1 className="text-4xl font-bold tracking-tight">Contact Us</h1>
         <p className="text-xl text-muted-foreground">
-          Have questions or feedback? We'd love to hear from you!
+          Have questions or feedback? We&apos;d love to hear from you!
         </p>
       </div>
 
@@ -23,7 +23,7 @@ export default function ContactPage() {
           <div>
             <h2 className="text-2xl font-semibold mb-4">Get In Touch</h2>
             <p className="text-muted-foreground mb-6">
-              We're here to help and answer any questions you might have. 
+              We&apos;re here to help and answer any questions you might have. 
               We look forward to hearing from you.
             </p>
           </div>
@@ -109,7 +109,7 @@ export default function ContactPage() {
             <div>
               <h3 className="text-lg font-medium">Can I suggest a new generator tool?</h3>
               <p className="text-muted-foreground">
-                Absolutely! We're always looking to expand our collection of tools. 
+                Absolutely! We&apos;re always looking to expand our collection of tools. 
                 Use the contact form to send us your ideas.
               </p>
             </div>
