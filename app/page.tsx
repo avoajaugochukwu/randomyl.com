@@ -48,6 +48,8 @@ export default async function Home() {
     };
   }).sort((a, b) => new Date(b.formattedDate).getTime() - new Date(a.formattedDate).getTime());
 
+  console.log(posts);
+
   return (
     <div className="container mx-auto px-4 py-16 md:py-20 lg:py-24">
       <Hero

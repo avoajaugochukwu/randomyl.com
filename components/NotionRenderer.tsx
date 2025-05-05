@@ -26,6 +26,7 @@ const renderRichText = (richText: RichTextItem[]) => {
 };
 
 export const NotionRenderer: React.FC<{ blocks: BlockObjectResponse[] }> = ({ blocks }) => {
+  console.log("blocks", blocks);
   return (
     <div className="prose dark:prose-invert max-w-none space-y-4">
       {blocks.map((block) => {
