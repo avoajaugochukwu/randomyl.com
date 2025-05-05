@@ -35,8 +35,8 @@ export default function ContactPage() {
               </div>
               <div>
                 <h3 className="font-medium">Email Us</h3>
-                <a href="mailto:hello@randomgenerators.com" className="text-muted-foreground hover:text-primary">
-                  hello@randomgenerators.com
+                <a href="mailto:hello@randomyl.com" className="text-muted-foreground hover:text-primary">
+                  hello@randomyl.com
                 </a>
               </div>
             </div>
@@ -47,7 +47,7 @@ export default function ContactPage() {
               </div>
               <div>
                 <h3 className="font-medium">Call Us</h3>
-                <p className="text-muted-foreground">+1 (555) 123-4567</p>
+                <p className="text-muted-foreground">+1 (435) 215-8000</p>
               </div>
             </div>
 
@@ -58,8 +58,8 @@ export default function ContactPage() {
               <div>
                 <h3 className="font-medium">Visit Us</h3>
                 <p className="text-muted-foreground">
-                  123 Generator Street<br />
-                  Tech City, TC 98765
+                  Randomyl<br />
+                  Toronto, ON, Canada
                 </p>
               </div>
             </div>
