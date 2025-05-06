@@ -16,9 +16,22 @@ const nextConfig = {
         port: '',
         pathname: '/**', // Allow any path under this hostname
       },
+      {
+        protocol: 'https',
+        hostname: 'imagedelivery.net',
+        port: '',
+        pathname: '/**', // Allow Cloudflare Images URLs
+      },
+      {
+        protocol: 'https',
+        hostname: '*.r2.cloudflarestorage.com',
+        port: '',
+        pathname: '/**',
+      },
       // Add other hostnames if you use images from other sources
       // Example: { protocol: 'https', hostname: 'images.unsplash.com' },
     ],
+    formats: ['image/webp'],
   },
 };
 

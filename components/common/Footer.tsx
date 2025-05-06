@@ -1,6 +1,7 @@
 import { tools } from '@/app/config/tools';
 import Link from 'next/link';
 import { Tool } from '@/app/config/tools';
+import AdminImageProcessor from '@/components/AdminImageProcessor';
 
 const footerLinks = {
   tools: [
@@ -82,6 +83,11 @@ export function Footer() {
                   </Link>
                 </li>
               ))}
+              
+              {/* Admin processor only visible on localhost */}
+              <li>
+                <AdminImageProcessor />
+              </li>
             </ul>
           </div>
         </div>

@@ -21,6 +21,7 @@ export default async function Home() {
 
     let featuredImageUrl = 'https://placehold.co/600x400';
     const featuredImageProp = page.properties["Featured Image"]?.files;
+    
     if (featuredImageProp && featuredImageProp.length > 0) {
       if (featuredImageProp[0].type === 'external') {
         featuredImageUrl = featuredImageProp[0].external.url;
@@ -44,11 +45,11 @@ export default async function Home() {
       excerpt: page.properties.Excerpt?.rich_text[0]?.plain_text || 'No excerpt available.',
       formattedDate: format(new Date(dateStr), 'MMM d, yyyy'),
       featuredImageUrl: featuredImageUrl,
-      author: authorNames, // Assign the joined author names string
+      author: authorNames,
+      readingTime: `${page.properties.ReadingTime?.number || 5} min read`,
+      tags: page.properties.Tags?.multi_select?.map((tag: any) => tag.name) || []
     };
   }).sort((a, b) => new Date(b.formattedDate).getTime() - new Date(a.formattedDate).getTime());
-
-  console.log(posts);
 
   return (
     <div className="container mx-auto px-4 py-16 md:py-20 lg:py-24">

@@ -80,7 +80,7 @@ export default async function BlogPage({ params }: BlogPageProps) {
   const author = pageProps.Author?.select?.name || 'Ugo Charles';
 
   return (
-    <article className="container mx-auto px-4 py-12 max-w-3xl">
+    <article className="max-w-3xl mx-auto px-4 py-10">      
       <header className="mb-8">
         <h1 className="text-4xl md:text-5xl font-bold mb-4 leading-tight">{title}</h1>
         <div className="text-muted-foreground text-sm mb-4">
@@ -94,7 +94,7 @@ export default async function BlogPage({ params }: BlogPageProps) {
       </header>
 
       {/* Render Notion Blocks */}
-      <NotionRenderer blocks={blocks} />
+      <NotionRenderer blocks={blocks} blogSlug={slug} />
 
     </article>
   );
