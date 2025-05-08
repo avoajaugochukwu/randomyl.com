@@ -39,13 +39,6 @@ export const fetchBySlug = React.cache(async (slug: string) => {
   return response.results[0] as PageObjectResponse;
 });
 
-// export const fetchPageBlocks = React.cache(async (pageId: string) => {
-//   const response = await notion.blocks.children.list({
-//     block_id: pageId,
-//   });
-//   return response.results as BlockObjectResponse[];
-// });
-
 export const fetchPageBlocks = React.cache(async (pageId: string) => {
   const blocks: BlockObjectResponse[] = [];
   let cursor: string | undefined = undefined; // Explicitly define as undefined

@@ -11,14 +11,6 @@ type BlogPageProps = {
   params: Promise<{ slug: string }>;
 };
 
-// Optional: Generate static paths at build time
-// export async function generateStaticParams() {
-//   const pages = await fetchPages(); // Assuming fetchPages gets all slugs
-//   return pages.map((page: any) => ({
-//     slug: page.properties.Slug?.rich_text[0]?.plain_text || page.id,
-//   }));
-// }
-
 export async function generateStaticParams() {
   const pages = await fetchPages();
   return pages.map((page: any) => ({

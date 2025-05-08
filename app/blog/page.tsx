@@ -2,6 +2,7 @@
 import { fetchPages } from '@/lib/notion';
 import { format } from 'date-fns'; // For formatting dates
 import { BlogPostCard } from "@/components/BlogPostCard"; // Import the card component
+import { baseUrl } from '../metadata';
 
 // Define a type for better structure (adjust based on your actual properties)
 type Post = {
@@ -21,6 +22,13 @@ type Post = {
 export const metadata = {
   title: 'Blog | My Site',
   description: 'Read the latest articles on our blog.',
+  alternates: {
+    canonical: `${baseUrl}/blog`,
+    languages: {
+      'en-US': `${baseUrl}/blog`,
+      'x-default': `${baseUrl}/blog`
+    },
+  },
 };
 
 export default async function BlogIndex() {
