@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { format } from 'date-fns';
 import { BlogPostCard } from "@/components/BlogPostCard";
 import Hero from "@/components/common/Hero";
+import ToolsList from "@/components/tools/ToolsList";
 
 export default async function Home() {
   const pages = await fetchPages();
@@ -57,6 +58,8 @@ export default async function Home() {
         title="Generate Random Data Instantly"
         description="Stop wasting time. Generate random data in seconds. Focus on what you do best."
       />
+
+      <ToolsList />
 
       <section>
         <h2 className="text-3xl font-bold text-center mb-10 md:mb-12">
