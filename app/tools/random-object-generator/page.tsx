@@ -6,10 +6,10 @@ import { FAQList } from '@/components/common/faq/FAQList';
 import { baseUrl } from '@/app/metadata';
 
 export const metadata: Metadata = {
-  title: 'Random Object Generator | RandomAnything.io',
+  title: 'Random Object Generator',
   description: 'Generate random JavaScript objects with custom properties and types. Perfect for testing APIs, mock data, and development.',
   openGraph: {
-    title: 'Random Object Generator | RandomAnything.io',
+    title: 'Random Object Generator | Randomyl',
     description: 'Generate random JavaScript objects with custom properties and types.',
     type: 'website',
   },

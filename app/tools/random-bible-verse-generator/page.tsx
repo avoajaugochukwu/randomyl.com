@@ -5,10 +5,10 @@ import { FAQList } from '@/components/common/faq/FAQList';
 import ToolDescription from '../components/descriptions/Description';
 import { baseUrl } from '@/app/metadata';
 export const metadata: Metadata = {
-  title: 'Random Bible Verse Generator | RandomAnything.io',
+  title: 'Random Bible Verse Generator',
   description: 'Generate random Bible verses by theme, book, or category. Perfect for daily devotionals, study, and spiritual inspiration.',
   openGraph: {
-    title: 'Random Bible Verse Generator | RandomAnything.io',
+    title: 'Random Bible Verse Generator | Randomyl',
     description: 'Generate meaningful Bible verses with our AI-powered tool. Choose from different translations and themes.',
     type: 'website',
   },

@@ -1,11 +1,24 @@
 import { Metadata } from 'next';
 import { Mailbox, MapPin, Phone } from 'lucide-react';
 import ContactForm from './ContactForm';
-
+import { baseUrl } from '../metadata';
 
 export const metadata: Metadata = {
-  title: 'Contact Us | Random Generator Tools',
-  description: "Get in touch with the team behind Random Generator Tools. We&apos;d love to hear from you!",
+  title: 'Contact Us',
+  description: "Get in touch with the team behind Randomyl. We'd love to hear from you!",
+  openGraph: {
+    title: 'Contact Us | Randomyl',
+    description: "Get in touch with the team behind Randomyl. We'd love to hear from you!",
+    url: `${baseUrl}/contact`,
+    type: 'website',
+  },
+  alternates: {
+    canonical: `${baseUrl}/contact`,
+    languages: {
+      'en-US': `${baseUrl}/contact`,
+      'x-default': `${baseUrl}/contact`,
+    },
+  },
 };
 
 export default function ContactPage() {

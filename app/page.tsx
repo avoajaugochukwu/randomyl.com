@@ -1,56 +1,11 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-import { fetchPages } from "@/lib/notion";
 import Link from 'next/link';
-import { format } from 'date-fns';
 import { BlogPostCard } from "@/components/BlogPostCard";
 import Hero from "@/components/common/Hero";
 import ToolsList from "@/components/tools/ToolsList";
+import { getAllPosts } from "@/lib/posts";
 
-export default async function Home() {
-  const pages = await fetchPages();
-
-  if (!pages || pages.length === 0) {
-    return (
-      <div className="container mx-auto px-4 py-8">
-        <div className="text-center text-muted-foreground">No posts found</div>
-      </div>
-    );
-  }
-
-  const posts = pages.map((page: any) => {
-    const dateStr = page.properties.Created?.created_time || new Date().toISOString();
-
-    let featuredImageUrl = 'https://placehold.co/600x400';
-    const featuredImageProp = page.properties["Featured Image"]?.files;
-    
-    if (featuredImageProp && featuredImageProp.length > 0) {
-      if (featuredImageProp[0].type === 'external') {
-        featuredImageUrl = featuredImageProp[0].external.url;
-      } else if (featuredImageProp[0].type === 'file') {
-        featuredImageUrl = featuredImageProp[0].file.url;
-      }
-    }
-
-    // Extract author names from multi-select
-    const authorMultiSelect = page.properties.Author?.multi_select;
-    let authorNames = 'Randomyl Team'; // Default author
-    if (authorMultiSelect && authorMultiSelect.length > 0) {
-      // Map over the array and get the name of each selected author
-      authorNames = authorMultiSelect.map((author: any) => author.name).join(', ');
-    }
-
-    return {
-      id: page.id,
-      title: page.properties.Title?.title[0]?.plain_text || 'Untitled Post',
-      slug: page.properties.Slug?.rich_text[0]?.plain_text || page.id,
-      excerpt: page.properties.Excerpt?.rich_text[0]?.plain_text || 'No excerpt available.',
-      formattedDate: format(new Date(dateStr), 'MMM d, yyyy'),
-      featuredImageUrl: featuredImageUrl,
-      author: authorNames,
-      readingTime: `${page.properties.ReadingTime?.number || 5} min read`,
-      tags: page.properties.Tags?.multi_select?.map((tag: any) => tag.name) || []
-    };
-  }).sort((a, b) => new Date(b.formattedDate).getTime() - new Date(a.formattedDate).getTime());
+export default function Home() {
+  const posts = getAllPosts().slice(0, 6);
 
   return (
     <div className="container mx-auto px-4 py-16 md:py-20 lg:py-24">

@@ -6,10 +6,10 @@ import ToolDescription from '../components/descriptions/Description';
 import { baseUrl } from '@/app/metadata';
 
 export const metadata: Metadata = {
-  title: 'Random Noun Generator | RandomAnything.io',
+  title: 'Random Noun Generator',
   description: 'Generate random nouns with our AI-powered noun generator. Create lists of concrete, abstract, proper, or collective nouns for your writing, learning, or testing needs.',
   openGraph: {
-    title: 'Random Noun Generator | RandomAnything.io',
+    title: 'Random Noun Generator | Randomyl',
     description: 'Generate random nouns with our AI-powered noun generator. Perfect for writers, teachers, and developers.',
     type: 'website',
   },

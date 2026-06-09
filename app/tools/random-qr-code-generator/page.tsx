@@ -6,10 +6,10 @@ import ToolDescription from '../components/descriptions/Description';
 import { baseUrl } from '@/app/metadata';
 
 export const metadata: Metadata = {
-  title: 'Random QR Code Generator | RandomAnything.io',
+  title: 'Random QR Code Generator',
   description: 'Generate random QR codes with AI-powered content. Create QR codes for URLs, text, contact info, and more with custom styling.',
   openGraph: {
-    title: 'Random QR Code Generator | RandomAnything.io',
+    title: 'Random QR Code Generator | Randomyl',
     description: 'Generate random QR codes with AI-powered content.',
     type: 'website',
   },

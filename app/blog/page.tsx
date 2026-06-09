@@ -1,27 +1,17 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-import { fetchPages } from '@/lib/notion';
-import { format } from 'date-fns'; // For formatting dates
+import { getAllPosts } from '@/lib/posts';
 import { BlogPostCard } from "@/components/BlogPostCard"; // Import the card component
 import { baseUrl } from '../metadata';
 
-// Define a type for better structure (adjust based on your actual properties)
-type Post = {
-  id: string;
-  slug: string;
-  title: string;
-  excerpt: string;
-  date: string; // Keep as string initially
-  formattedDate: string;
-  readingTime: string;
-  tags: string[];
-  author: string;
-  featuredImageUrl: string;
-};
-
 // Optional: Add metadata for the blog page
 export const metadata = {
-  title: 'Blog | My Site',
-  description: 'Read the latest articles on our blog.',
+  title: 'Blog',
+  description: 'Guides and articles on random data generation, QR codes, Bible study tools, data privacy, and more from the Randomyl team.',
+  openGraph: {
+    title: 'Blog | Randomyl',
+    description: 'Guides and articles on random data generation, QR codes, Bible study tools, data privacy, and more from the Randomyl team.',
+    url: `${baseUrl}/blog`,
+    type: 'website',
+  },
   alternates: {
     canonical: `${baseUrl}/blog`,
     languages: {
@@ -31,10 +21,10 @@ export const metadata = {
   },
 };
 
-export default async function BlogIndex() {
-  const pages = await fetchPages();
+export default function BlogIndex() {
+  const posts = getAllPosts();
 
-  if (!pages || pages.length === 0) {
+  if (posts.length === 0) {
     return (
       <div className="container mx-auto px-4 py-8">
         <h1 className="text-4xl font-bold mb-8 text-center">Blog</h1>
@@ -42,42 +32,6 @@ export default async function BlogIndex() {
       </div>
     );
   }
-
-  // Map Notion pages to our Post type
-  const posts: Post[] = pages.map((page: any) => {
-    const dateStr = page.properties.Created?.created_time || new Date().toISOString();
-
-    let featuredImageUrl = 'https://placehold.co/600x400';
-    const featuredImageProp = page.properties["Featured Image"]?.files;
-    if (featuredImageProp && featuredImageProp.length > 0) {
-      if (featuredImageProp[0].type === 'external') {
-        featuredImageUrl = featuredImageProp[0].external.url;
-      } else if (featuredImageProp[0].type === 'file') {
-        featuredImageUrl = featuredImageProp[0].file.url; // Use the file URL (might be temporary)
-      }
-    }
-
-    // Extract author names from multi-select
-    const authorMultiSelect = page.properties.Author?.multi_select;
-    let authorNames = 'Randomyl Team'; // Default author
-    if (authorMultiSelect && authorMultiSelect.length > 0) {
-      // Map over the array and get the name of each selected author
-      authorNames = authorMultiSelect.map((author: any) => author.name).join(', ');
-    }
-
-    return {
-      id: page.id,
-      slug: page.properties.Slug?.rich_text[0]?.plain_text || page.id,
-      title: page.properties.Title?.title[0]?.plain_text || 'Untitled Post',
-      excerpt: page.properties.Excerpt?.rich_text[0]?.plain_text || 'No excerpt available.',
-      date: dateStr,
-      formattedDate: format(new Date(dateStr), 'MMMM d, yyyy'),
-      readingTime: `${page.properties.ReadingTime?.number || 5} min read`,
-      tags: page.properties.Tags?.multi_select?.map((tag: any) => tag.name) || [],
-      author: authorNames,
-      featuredImageUrl: featuredImageUrl,
-    };
-  }).sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
   return (
     <div className="container mx-auto px-4 py-12">
@@ -106,6 +60,3 @@ export default async function BlogIndex() {
     </div>
   );
 }
-
-// Optional: Add revalidation if needed
-// export const revalidate = 60; // Revalidate every 60 seconds 

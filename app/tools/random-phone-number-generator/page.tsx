@@ -12,10 +12,10 @@ import { baseUrl } from "@/app/metadata";
 // ask how many numbers they want to generate
 
 export const metadata: Metadata = {
-  title: 'Random Phone Number Generator | RandomAnything.io',
+  title: 'Random Phone Number Generator',
   description: 'Generate random phone numbers with our AI-powered phone number generator. Perfect for developers, testers, and educators.',
   openGraph: {
-    title: 'Random Phone Number Generator | RandomAnything.io',
+    title: 'Random Phone Number Generator | Randomyl',
     description: 'Generate random phone numbers with our AI-powered phone number generator. Perfect for developers, testers, and educators.',
     type: 'website',
   },

@@ -1,10 +1,24 @@
 import { Metadata } from 'next';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
+import { baseUrl } from '../metadata';
 
 export const metadata: Metadata = {
-  title: 'About Us | Random Generator Tools',
-  description: 'Learn more about our collection of random generator tools and the team behind them.',
+  title: 'About',
+  description: 'Learn about Randomyl — our collection of fast, free random generator tools and the team behind them.',
+  openGraph: {
+    title: 'About | Randomyl',
+    description: 'Learn about Randomyl — our collection of fast, free random generator tools and the team behind them.',
+    url: `${baseUrl}/about`,
+    type: 'website',
+  },
+  alternates: {
+    canonical: `${baseUrl}/about`,
+    languages: {
+      'en-US': `${baseUrl}/about`,
+      'x-default': `${baseUrl}/about`,
+    },
+  },
 };
 
 export default function AboutPage() {
@@ -12,7 +26,7 @@ export default function AboutPage() {
     <div className="container mx-auto px-4 py-16 max-w-4xl">
       <div className="space-y-8">
         <div className="text-center space-y-4">
-          <h1 className="text-4xl font-bold tracking-tight">About Random Generator Tools</h1>
+          <h1 className="text-4xl font-bold tracking-tight">About Randomyl</h1>
           <p className="text-xl text-muted-foreground">
             Simplifying creativity and problem-solving with powerful random generation tools
           </p>
@@ -21,7 +35,7 @@ export default function AboutPage() {
         <div className="space-y-6">
           <h2 className="text-2xl font-semibold">Our Mission</h2>
           <p className="text-lg">
-            We built Random Generator Tools to provide developers, creators, and everyday users with 
+            We built Randomyl to provide developers, creators, and everyday users with
             reliable, easy-to-use random generation utilities. Our goal is to streamline workflows and 
             inspire creativity through randomness.
           </p>

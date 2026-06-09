@@ -7,9 +7,28 @@ interface FAQListProps {
 
 export function FAQList({ type }: FAQListProps) {
   const faqs = getFAQs(type);
-  
+
+  const faqJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((faq) => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: Array.isArray(faq.answer) ? faq.answer.join(' ') : faq.answer,
+      },
+    })),
+  };
+
   return (
     <div className="mt-12 space-y-6 max-w-xl mx-auto p-4 w-full">
+      {faqs.length > 0 && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        />
+      )}
       <div className="max-w-[764px] px-6">
         <h2 className="text-center text-3xl font-bold mb-8">
           Frequently asked questions

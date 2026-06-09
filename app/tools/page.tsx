@@ -4,7 +4,7 @@ import ToolsList from '@/components/tools/ToolsList';
 import { baseUrl } from '@/app/metadata';
 
 export const metadata: Metadata = {
-  title: 'Random Generator Tools | RandomAnything.io',
+  title: 'Random Generator Tools',
   description: 'Explore our collection of random generators. Generate phone numbers, nouns, text, and more with our AI-powered tools.',
   robots: {
     index: true, // Allow indexing
