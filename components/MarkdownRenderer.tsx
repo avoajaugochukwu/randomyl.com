@@ -6,9 +6,15 @@ import rehypeHighlight from 'rehype-highlight';
 import Image from 'next/image';
 import 'highlight.js/styles/github-dark.css';
 
-export function MarkdownRenderer({ content }: { content: string }) {
+export function MarkdownRenderer({
+  content,
+  className = 'art-body',
+}: {
+  content: string;
+  className?: string;
+}) {
   return (
-    <div className="prose dark:prose-invert max-w-none prose-headings:scroll-mt-20 prose-img:rounded-md prose-a:text-primary">
+    <div className={className}>
       <ReactMarkdown
         remarkPlugins={[remarkGfm]}
         rehypePlugins={[rehypeHighlight]}
@@ -19,9 +25,9 @@ export function MarkdownRenderer({ content }: { content: string }) {
               <Image
                 src={src}
                 alt={alt || ''}
-                width={800}
-                height={500}
-                className="mx-auto h-auto max-w-full rounded-md"
+                width={1100}
+                height={620}
+                className="mx-auto h-auto max-w-full"
               />
             );
           },

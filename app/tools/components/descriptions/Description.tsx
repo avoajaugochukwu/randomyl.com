@@ -9,29 +9,64 @@ export default function ToolDescription({ toolKey }: ToolDescriptionProps) {
   const { about, features, useCases } = getToolDescription(toolKey);
 
   return (
-    <div className="mt-12 space-y-6 max-w-xl mx-auto p-4 w-full">
-      <section>
-        <h2 className="text-2xl font-semibold mb-3">About Our {about.title}</h2>
-        <p className="text-gray-600">{about.description}</p>
-      </section>
+    <section className="about">
+      <div className="wrap">
+        <div className="about-grid">
+          <div>
+            <h2 className="h2">About our {about.title}</h2>
+            <p style={{ marginTop: 18 }}>{about.description}</p>
 
-      <section>
-        <h2 className="text-2xl font-semibold mb-3">Features</h2>
-        <ul className="list-disc list-inside text-gray-600">
-          {features.map((feature, index) => (
-            <li key={index}>{feature}</li>
-          ))}
-        </ul>
-      </section>
+            {features.length > 0 && (
+              <>
+                <h3
+                  className="mono"
+                  style={{
+                    fontSize: 11,
+                    letterSpacing: '0.16em',
+                    textTransform: 'uppercase',
+                    color: 'var(--ink-3)',
+                    margin: '28px 0 16px',
+                    fontWeight: 400,
+                  }}
+                >
+                  Features
+                </h3>
+                <ul className="feature-list">
+                  {features.map((feature, index) => (
+                    <li key={index}>{feature}</li>
+                  ))}
+                </ul>
+              </>
+            )}
+          </div>
 
-      <section>
-        <h2 className="text-2xl font-semibold mb-3">Use Cases</h2>
-        <ul className="list-disc list-inside text-gray-600">
-          {useCases.map((useCase, index) => (
-            <li key={index}>{useCase}</li>
-          ))}
-        </ul>
-      </section>
-    </div>
+          <div>
+            <h3
+              className="mono"
+              style={{
+                fontSize: 11,
+                letterSpacing: '0.16em',
+                textTransform: 'uppercase',
+                color: 'var(--ink-3)',
+                margin: '0 0 4px',
+                fontWeight: 400,
+              }}
+            >
+              Use cases
+            </h3>
+            <div className="usecards">
+              {useCases.map((useCase, index) => (
+                <div className="usecard" key={index}>
+                  <span className="uc-n">{String(index + 1).padStart(2, '0')}</span>
+                  <div>
+                    <p>{useCase}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   );
-} 
+}

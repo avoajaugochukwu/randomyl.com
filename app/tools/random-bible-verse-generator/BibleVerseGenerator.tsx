@@ -93,7 +93,7 @@ export default function BibleVerseGenerator() {
   };
 
   return (
-    <div className="flex flex-col gap-4 max-w-xl mx-auto p-4 w-full">
+    <div className="panel flex flex-col gap-4 max-w-2xl mx-auto w-full p-6 md:p-8">
       <div className="space-y-4">
         <div className="flex flex-wrap gap-2 items-center">
           {visibleThemes.map((theme) => (

@@ -5,6 +5,7 @@ import Hero from "@/components/common/Hero";
 import PhoneNumberGenerator from './PhoneNumberGenerator';
 import { Metadata } from 'next';
 import ToolDescription from '../components/descriptions/Description';
+import OtherTools from '@/components/tools/OtherTools';
 import { baseUrl } from "@/app/metadata";
 // User should be able to enter details manually in separate input fields
 // or
@@ -36,13 +37,18 @@ export const metadata: Metadata = {
 export default function RandomPhoneNumberGenerator() {
   return (
     <>
-      <Hero 
-        title="Random Phone Number Generator" 
-        description="Generate random phone numbers for any country or area code" 
+      <Hero
+        title="Random Phone Number Generator"
+        description="Generate valid-format phone numbers for any country or area code. Built for QA, mock data, and development."
+        tag="Generator · Testing & Data"
+        crumb={[{ label: 'Home', href: '/' }, { label: 'Tools', href: '/tools' }, { label: 'Phone Number Generator' }]}
       />
-      <PhoneNumberGenerator />
+      <section className="wrap" id="app">
+        <PhoneNumberGenerator />
+      </section>
       <ToolDescription toolKey="phone" />
       <FAQList type="phone" />
+      <OtherTools current="phone" />
     </>
   );
 }

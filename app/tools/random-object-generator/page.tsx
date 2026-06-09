@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import ObjectGenerator from './ObjectGenerator';
 import Hero from '@/components/common/Hero';
 import ToolDescription from '../components/descriptions/Description';
+import OtherTools from '@/components/tools/OtherTools';
 import { FAQList } from '@/components/common/faq/FAQList';
 import { baseUrl } from '@/app/metadata';
 
@@ -31,11 +32,16 @@ export default function ObjectGeneratorPage() {
     <>
       <Hero
         title="Random Object Generator"
-        description="Generate random JavaScript objects with custom properties and types. Perfect for testing APIs, creating mock data, and development purposes."
+        description="Generate random JavaScript objects with custom properties and types. Perfect for testing APIs, creating mock data, and development."
+        tag="Generator · Developers"
+        crumb={[{ label: 'Home', href: '/' }, { label: 'Tools', href: '/tools' }, { label: 'Object Generator' }]}
       />
-      <ObjectGenerator />
+      <section className="wrap" id="app">
+        <ObjectGenerator />
+      </section>
       <ToolDescription toolKey="object" />
       <FAQList type="object" />
+      <OtherTools current="object" />
     </>
   );
 } 

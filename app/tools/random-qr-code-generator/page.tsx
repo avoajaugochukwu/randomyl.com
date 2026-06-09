@@ -3,6 +3,7 @@ import Hero from '@/components/common/Hero';
 import { FAQList } from '@/components/common/faq/FAQList';
 import QRGenerator from './QRGenerator';
 import ToolDescription from '../components/descriptions/Description';
+import OtherTools from '@/components/tools/OtherTools';
 import { baseUrl } from '@/app/metadata';
 
 export const metadata: Metadata = {
@@ -28,14 +29,19 @@ export const metadata: Metadata = {
 
 export default function QRGeneratorPage() {
   return (
-    <div>
-      <Hero 
-        title="Random QR Code Generator" 
-        description="Generate random QR codes with AI-powered content. Perfect for testing, mockups, or creative projects." 
+    <>
+      <Hero
+        title="QR Code Generator"
+        description="Generate QR codes with custom content and styling — scannable, exportable, and ready to embed anywhere."
+        tag="Generator · Marketing & Web"
+        crumb={[{ label: 'Home', href: '/' }, { label: 'Tools', href: '/tools' }, { label: 'QR Code Generator' }]}
       />
-      <QRGenerator />
+      <section className="wrap" id="app">
+        <QRGenerator />
+      </section>
       <ToolDescription toolKey="qr" />
       <FAQList type="qr" />
-    </div>
+      <OtherTools current="qr" />
+    </>
   );
 } 

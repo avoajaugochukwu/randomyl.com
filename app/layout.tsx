@@ -1,4 +1,4 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Instrument_Serif, Hanken_Grotesk, Space_Mono } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { Header } from "@/components/common/Header";
@@ -6,14 +6,26 @@ import { Footer } from "@/components/common/Footer";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { metadata, jsonLd } from "./metadata";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const instrumentSerif = Instrument_Serif({
+  variable: "--font-instrument-serif",
   subsets: ["latin"],
+  weight: ["400"],
+  style: ["normal", "italic"],
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const hankenGrotesk = Hanken_Grotesk({
+  variable: "--font-hanken",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
+  display: "swap",
+});
+
+const spaceMono = Space_Mono({
+  variable: "--font-space-mono",
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  display: "swap",
 });
 
 export { metadata };
@@ -27,15 +39,14 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body
         className={cn(
-          "min-h-screen bg-background font-sans antialiased flex flex-col",
-          geistSans.variable,
-          geistMono.variable
+          "min-h-screen flex flex-col",
+          instrumentSerif.variable,
+          hankenGrotesk.variable,
+          spaceMono.variable
         )}
       >
         <Header />
-        <div className="relative flex flex-col flex-grow">
-          <main className="flex-grow pt-14">{children}</main>
-        </div>
+        <main className="flex-grow">{children}</main>
         <Footer />
         <script
           type="application/ld+json"

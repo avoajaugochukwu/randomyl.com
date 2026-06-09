@@ -3,6 +3,7 @@ import BibleVerseGenerator from './BibleVerseGenerator';
 import Hero from '@/components/common/Hero';
 import { FAQList } from '@/components/common/faq/FAQList';
 import ToolDescription from '../components/descriptions/Description';
+import OtherTools from '@/components/tools/OtherTools';
 import { baseUrl } from '@/app/metadata';
 export const metadata: Metadata = {
   title: 'Random Bible Verse Generator',
@@ -30,12 +31,16 @@ export default function BibleVersePage() {
     <>
       <Hero
         title="Random Bible Verse Generator"
-        description="Generate meaningful Bible verses for your daily devotionals, study sessions, or whenever you need spiritual inspiration. 
-            Specify themes, books, or categories to find verses that resonate with your needs."
+        description="Generate meaningful Bible verses for daily devotionals, study, or inspiration. Specify themes, books, or categories to find verses that resonate."
+        tag="Generator · Faith & Study"
+        crumb={[{ label: 'Home', href: '/' }, { label: 'Tools', href: '/tools' }, { label: 'Bible Verse Generator' }]}
       />
-      <BibleVerseGenerator />
+      <section className="wrap" id="app">
+        <BibleVerseGenerator />
+      </section>
       <ToolDescription toolKey="bible" />
       <FAQList type="bible" />
+      <OtherTools current="bible" />
     </>
   );
 } 

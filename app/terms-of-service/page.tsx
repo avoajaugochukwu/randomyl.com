@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Terms of Service | Randomyl',
@@ -12,9 +13,18 @@ export const metadata: Metadata = {
 
 export default function TermsOfServicePage() {
   return (
-    <div className="container mx-auto max-w-3xl px-4 py-12">
-      <h1 className="text-3xl font-bold mb-6">Terms of Service</h1>
-      <div className="prose prose-stone dark:prose-invert max-w-none space-y-4">
+    <>
+      <header className="page-head">
+        <div className="wrap">
+          <div className="crumb">
+            <Link href="/">Home</Link>
+            <span className="sep">/</span>Terms
+          </div>
+          <h1 className="display">Terms of Service</h1>
+        </div>
+      </header>
+      <section className="wrap" style={{ paddingBottom: 'clamp(40px,6vw,72px)' }}>
+        <div className="legal">
         <p>
           <em>Last Updated: 03/05/2025</em>
         </p>
@@ -57,7 +67,8 @@ export default function TermsOfServicePage() {
           [Placeholder for more detailed terms of service content. You should
           consult with a legal professional to draft comprehensive terms.]
         </p>
-      </div>
-    </div>
+        </div>
+      </section>
+    </>
   );
 } 

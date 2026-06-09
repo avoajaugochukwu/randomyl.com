@@ -7,8 +7,8 @@ export const metadata: Metadata = {
   title: 'Random Generator Tools',
   description: 'Explore our collection of random generators. Generate phone numbers, nouns, text, and more with our AI-powered tools.',
   robots: {
-    index: true, // Allow indexing
-    follow: true, // Allow following links
+    index: true,
+    follow: true,
   },
   alternates: {
     canonical: `${baseUrl}/tools`,
@@ -21,11 +21,14 @@ export const metadata: Metadata = {
 
 export default function ToolsPage() {
   return (
-    <div className="">
+    <>
       <Hero
-        title="Random Generator Tools"
-        description="Explore our collection of random generators. Generate phone numbers, nouns, text, and more with our AI-powered tools." />
+        title="The Generators"
+        description="Every Randomyl tool in one place — pick one, tune it, and roll. Free, instant, and no sign-up required."
+        tag="Tools · 5 live"
+        crumb={[{ label: 'Home', href: '/' }, { label: 'Tools' }]}
+      />
       <ToolsList />
-    </div>
+    </>
   );
-} 
+}

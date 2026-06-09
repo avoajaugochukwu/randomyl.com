@@ -21,24 +21,27 @@ export function FAQList({ type }: FAQListProps) {
     })),
   };
 
+  if (faqs.length === 0) return null;
+
   return (
-    <div className="mt-12 space-y-6 max-w-xl mx-auto p-4 w-full">
-      {faqs.length > 0 && (
+    <section className="about" style={{ paddingTop: 'clamp(40px,5vw,64px)' }}>
+      <div className="wrap">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
         />
-      )}
-      <div className="max-w-[764px] px-6">
-        <h2 className="text-center text-3xl font-bold mb-8">
+        <div className="section-head" style={{ marginBottom: 8 }}>
+          <span className="tag">FAQ</span>
+        </div>
+        <h2 className="h2" style={{ marginBottom: 18 }}>
           Frequently asked questions
         </h2>
-        <div>
+        <div className="faq-list">
           {faqs.map((faq) => (
             <FAQItem key={faq.id} question={faq.question} answer={faq.answer} />
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
-} 
+}

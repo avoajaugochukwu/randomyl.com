@@ -25,10 +25,14 @@ export default function AboutPage() {
   return (
     <div className="container mx-auto px-4 py-16 max-w-4xl">
       <div className="space-y-8">
-        <div className="text-center space-y-4">
-          <h1 className="text-4xl font-bold tracking-tight">About Randomyl</h1>
-          <p className="text-xl text-muted-foreground">
-            Simplifying creativity and problem-solving with powerful random generation tools
+        <div className="space-y-5">
+          <span className="tag">About</span>
+          <h1 className="display" style={{ fontSize: 'clamp(40px,6vw,76px)' }}>
+            About Randomyl
+          </h1>
+          <p className="lede">
+            Simplifying creativity and problem-solving with powerful random
+            generation tools.
           </p>
         </div>
 

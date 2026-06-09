@@ -1,5 +1,3 @@
-'use client';
-
 interface FAQItemProps {
   question: string;
   answer: string | string[];
@@ -7,13 +5,11 @@ interface FAQItemProps {
 
 export function FAQItem({ question, answer }: FAQItemProps) {
   return (
-    <div className="border-b border-gray-200">
-      <div className="py-6">
-        <span className="text-base font-medium">{question}</span>
-      </div>
-      <div className="pb-6 text-sm text-muted-foreground">
+    <div className="faq-item">
+      <p className="q">{question}</p>
+      <div className="a">
         {Array.isArray(answer) ? (
-          <ul className="list-none space-y-2">
+          <ul>
             {answer.map((item, index) => (
               <li key={index}>{item}</li>
             ))}
@@ -24,4 +20,4 @@ export function FAQItem({ question, answer }: FAQItemProps) {
       </div>
     </div>
   );
-} 
+}

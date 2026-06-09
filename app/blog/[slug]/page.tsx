@@ -1,7 +1,8 @@
+import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { Badge } from '@/components/ui/badge';
 import { MarkdownRenderer } from '@/components/MarkdownRenderer';
-import { getPostBySlug, getPostSlugs } from '@/lib/posts';
+import { PostRow } from '@/components/PostRow';
+import { getPostBySlug, getPostSlugs, getAllPosts } from '@/lib/posts';
 import { baseUrl } from '@/app/metadata';
 import { Metadata } from 'next';
 
@@ -11,6 +12,11 @@ type BlogPageProps = {
 
 export function generateStaticParams() {
   return getPostSlugs().map((slug) => ({ slug }));
+}
+
+function categoryLabel(tag?: string): string {
+  if (!tag) return 'Article';
+  return tag.charAt(0).toUpperCase() + tag.slice(1);
 }
 
 export async function generateMetadata({ params }: BlogPageProps): Promise<Metadata> {
@@ -61,6 +67,17 @@ export default async function BlogPage({ params }: BlogPageProps) {
     notFound();
   }
 
+  const category = categoryLabel(post.tags[0]);
+
+  const related = getAllPosts()
+    .filter((p) => p.slug !== post.slug)
+    .sort((a, b) => {
+      const aShared = a.tags.some((t) => post.tags.includes(t)) ? 0 : 1;
+      const bShared = b.tags.some((t) => post.tags.includes(t)) ? 0 : 1;
+      return aShared - bShared;
+    })
+    .slice(0, 2);
+
   const url = `${baseUrl}/blog/${slug}`;
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -81,30 +98,54 @@ export default async function BlogPage({ params }: BlogPageProps) {
   };
 
   return (
-    <article className="max-w-3xl mx-auto px-4 py-10">
+    <article className="article">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <header className="mb-8">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4 leading-tight">{post.title}</h1>
-        <div className="text-muted-foreground text-sm mb-4">
-          <span>{post.formattedDate}</span> · <span>{post.readingTime}</span> ·{' '}
-          <span>By {post.author}</span>
+      <div className="wrap">
+        <div className="art-head">
+          <div className="crumb">
+            <Link href="/">Home</Link>
+            <span className="sep">/</span>
+            <Link href="/blog">Blog</Link>
+            <span className="sep">/</span>
+            {category}
+          </div>
+          <span className="tag art-cat">{category}</span>
+          <h1 className="art-title">{post.title}</h1>
+          {post.excerpt && <p className="art-dek">{post.excerpt}</p>}
+          <div className="art-byline">
+            <span className="who">{post.author}</span>
+            <span className="pipe">|</span>
+            <span>{post.formattedDate}</span>
+            <span className="pipe">|</span>
+            <span>{post.readingTime}</span>
+          </div>
         </div>
-        <div className="flex flex-wrap gap-2">
-          {post.tags.map((tag) => (
-            <Badge key={tag} variant="secondary">
-              {tag}
-            </Badge>
-          ))}
-        </div>
-      </header>
 
-      <MarkdownRenderer content={post.content} />
+        <MarkdownRenderer content={post.content} className="art-body" />
+      </div>
+
+      {related.length > 0 && (
+        <section className="related">
+          <div className="wrap">
+            <div className="section-head">
+              <h2 className="h2">Keep reading</h2>
+              <Link className="link-arrow" href="/blog">
+                All posts →
+              </Link>
+            </div>
+            <div className="posts-list">
+              {related.map((p) => (
+                <PostRow key={p.id} post={p} />
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
     </article>
   );
 }
 
-// All blog slugs are known at build time; 404 on anything unknown.
 export const dynamicParams = false;

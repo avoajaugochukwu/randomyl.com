@@ -78,7 +78,7 @@ export default function PhoneNumberGenerator() {
   };
 
   return (
-    <div className="flex flex-col gap-4 max-w-xl mx-auto p-4 w-full">
+    <div className="panel flex flex-col gap-4 max-w-2xl mx-auto w-full p-6 md:p-8">
       <form
         onSubmit={(e) => {
           e.preventDefault();

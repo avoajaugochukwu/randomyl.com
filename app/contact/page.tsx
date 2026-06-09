@@ -24,10 +24,13 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <div className="container mx-auto px-4 py-16 max-w-4xl">
-      <div className="text-center space-y-4 mb-12">
-        <h1 className="text-4xl font-bold tracking-tight">Contact Us</h1>
-        <p className="text-xl text-muted-foreground">
-          Have questions or feedback? We&apos;d love to hear from you!
+      <div className="space-y-5 mb-12">
+        <span className="tag">Contact</span>
+        <h1 className="display" style={{ fontSize: 'clamp(40px,6vw,76px)' }}>
+          Get in touch
+        </h1>
+        <p className="lede">
+          Have questions or feedback? We&apos;d love to hear from you.
         </p>
       </div>
 

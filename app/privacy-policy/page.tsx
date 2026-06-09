@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Privacy Policy | Randomyl',
@@ -12,9 +13,18 @@ export const metadata: Metadata = {
 
 export default function PrivacyPolicyPage() {
   return (
-    <div className="container mx-auto max-w-3xl px-4 py-12">
-      <h1 className="text-3xl font-bold mb-6">Privacy Policy</h1>
-      <div className="prose prose-stone dark:prose-invert max-w-none space-y-4">
+    <>
+      <header className="page-head">
+        <div className="wrap">
+          <div className="crumb">
+            <Link href="/">Home</Link>
+            <span className="sep">/</span>Privacy
+          </div>
+          <h1 className="display">Privacy Policy</h1>
+        </div>
+      </header>
+      <section className="wrap" style={{ paddingBottom: 'clamp(40px,6vw,72px)' }}>
+        <div className="legal">
         <p>
           <em>Last Updated: 03/05/2025</em>
         </p>
@@ -57,7 +67,8 @@ export default function PrivacyPolicyPage() {
           [Placeholder for more detailed privacy policy content. You should
           consult with a legal professional to draft a comprehensive policy.]
         </p>
-      </div>
-    </div>
+        </div>
+      </section>
+    </>
   );
 } 
