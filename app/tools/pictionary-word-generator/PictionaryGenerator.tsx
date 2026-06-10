@@ -17,10 +17,16 @@ function sample<T>(arr: T[], n: number): T[] {
   return out;
 }
 
-export default function PictionaryGenerator() {
-  const [mode, setMode] = useState<PictionaryMode>('pictionary');
-  const [difficulty, setDifficulty] = useState<Difficulty>('medium');
-  const [count, setCount] = useState(1);
+export interface PictionaryPreset {
+  mode?: PictionaryMode;
+  difficulty?: Difficulty;
+  count?: number;
+}
+
+export default function PictionaryGenerator({ preset }: { preset?: PictionaryPreset } = {}) {
+  const [mode, setMode] = useState<PictionaryMode>(preset?.mode ?? 'pictionary');
+  const [difficulty, setDifficulty] = useState<Difficulty>(preset?.difficulty ?? 'medium');
+  const [count, setCount] = useState(preset?.count ?? 1);
   const [results, setResults] = useState<string[]>([]);
   const [copied, setCopied] = useState(false);
 

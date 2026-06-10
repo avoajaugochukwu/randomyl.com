@@ -13,12 +13,20 @@ function randInt(min: number, max: number): number {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-export default function NumberGenerator() {
-  const [min, setMin] = useState(1);
-  const [max, setMax] = useState(100);
-  const [count, setCount] = useState(1);
-  const [unique, setUnique] = useState(false);
-  const [sort, setSort] = useState<SortMode>('none');
+export interface NumberPreset {
+  min?: number;
+  max?: number;
+  count?: number;
+  unique?: boolean;
+  sort?: SortMode;
+}
+
+export default function NumberGenerator({ preset }: { preset?: NumberPreset } = {}) {
+  const [min, setMin] = useState(preset?.min ?? 1);
+  const [max, setMax] = useState(preset?.max ?? 100);
+  const [count, setCount] = useState(preset?.count ?? 1);
+  const [unique, setUnique] = useState(preset?.unique ?? false);
+  const [sort, setSort] = useState<SortMode>(preset?.sort ?? 'none');
   const [results, setResults] = useState<number[]>([]);
   const [error, setError] = useState('');
   const [copied, setCopied] = useState(false);

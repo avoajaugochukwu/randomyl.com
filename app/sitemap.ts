@@ -3,6 +3,7 @@ import { MetadataRoute } from 'next'
 import { getAllPosts } from '@/lib/posts'
 import { baseUrl } from './metadata';
 import { tools } from './config/tools';
+import { variantHubs } from './config/toolVariants';
 
 // Define static routes directly
 const staticRoutes = [
@@ -43,6 +44,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.9,
   }));
 
+  // Generate URLs for tool variant pages (long-tail fanout)
+  const variantUrls = variantHubs.flatMap((hub) =>
+    hub.variants.map((v) => ({
+      url: `${baseUrl}/tools/${hub.hubRoute}/${v.slug}`,
+      lastModified: formattedDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    }))
+  );
+
   // Combine static and dynamic URLs
-  return [...routeUrls, ...blogUrls, ...toolUrls];
+  return [...routeUrls, ...blogUrls, ...toolUrls, ...variantUrls];
 } 

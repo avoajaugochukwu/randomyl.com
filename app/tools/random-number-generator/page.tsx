@@ -4,6 +4,7 @@ import Hero from '@/components/common/Hero';
 import { FAQList } from '@/components/common/faq/FAQList';
 import ToolDescription from '../components/descriptions/Description';
 import OtherTools from '@/components/tools/OtherTools';
+import ToolVariants from '@/components/tools/ToolVariants';
 import { baseUrl } from '@/app/metadata';
 
 export const metadata: Metadata = {
@@ -47,6 +48,7 @@ export default function NumberGeneratorPage() {
       <section className="wrap" id="app">
         <NumberGenerator />
       </section>
+      <ToolVariants hubRoute="random-number-generator" />
       <ToolDescription toolKey="number" />
       <FAQList type="number" />
       <OtherTools current="number" />

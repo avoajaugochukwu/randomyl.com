@@ -4,6 +4,7 @@ import Hero from '@/components/common/Hero';
 import { FAQList } from '@/components/common/faq/FAQList';
 import ToolDescription from '../components/descriptions/Description';
 import OtherTools from '@/components/tools/OtherTools';
+import ToolVariants from '@/components/tools/ToolVariants';
 import { baseUrl } from '@/app/metadata';
 
 export const metadata: Metadata = {
@@ -47,6 +48,7 @@ export default function PictionaryGeneratorPage() {
       <section className="wrap" id="app">
         <PictionaryGenerator />
       </section>
+      <ToolVariants hubRoute="pictionary-word-generator" />
       <ToolDescription toolKey="pictionary" />
       <FAQList type="pictionary" />
       <OtherTools current="pictionary" />

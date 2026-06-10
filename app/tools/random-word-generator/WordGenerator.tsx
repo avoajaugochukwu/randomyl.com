@@ -18,10 +18,16 @@ function sample<T>(arr: T[], n: number): T[] {
   return out;
 }
 
-export default function WordGenerator() {
-  const [count, setCount] = useState(5);
-  const [letters, setLetters] = useState(0); // 0 = any length
-  const [startsWith, setStartsWith] = useState('');
+export interface WordPreset {
+  count?: number;
+  letters?: number;
+  startsWith?: string;
+}
+
+export default function WordGenerator({ preset }: { preset?: WordPreset } = {}) {
+  const [count, setCount] = useState(preset?.count ?? 5);
+  const [letters, setLetters] = useState(preset?.letters ?? 0); // 0 = any length
+  const [startsWith, setStartsWith] = useState(preset?.startsWith ?? '');
   const [results, setResults] = useState<string[]>([]);
   const [error, setError] = useState('');
   const [copied, setCopied] = useState(false);
