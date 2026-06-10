@@ -535,6 +535,50 @@ const toolDescriptions: Record<ToolKey, ToolDescription> = {
       "Inspiration for journaling prompts",
       "Pairing with the mood ring color guide"
     ]
+  },
+  trivia: {
+    about: {
+      title: "Trivia Questions Generator",
+      description: "Our trivia questions generator serves up random questions with answers across eight categories — general knowledge, geography, history, science, movies, music, sports, and animals. Generate a quick set for a quiz round, then reveal each answer when you are ready."
+    },
+    features: [
+      "Eight categories plus an all-mixed mode",
+      "Every question comes with its answer",
+      "Reveal answers one at a time",
+      "Generate up to 20 questions at once",
+      "Works on any device, instantly",
+      "Free, no sign-up, no ads in the way"
+    ],
+    useCases: [
+      "Quiz night with friends or family",
+      "Classroom warm-ups and review games",
+      "Pub and bar trivia rounds",
+      "Road trips and long car rides",
+      "Team-building and office breaks",
+      "Solo practice and learning"
+    ]
+  },
+  neverhaveiever: {
+    about: {
+      title: "Never Have I Ever Generator",
+      description: "Our Never Have I Ever generator gives you random prompts across categories — classic, funny, party, couples, and kid-friendly. Pick a category or mix them all for an endless stream of statements to play with."
+    },
+    features: [
+      "Five categories, from classic to couples",
+      "Generate one prompt or a whole batch",
+      "Family-friendly and kid-safe options",
+      "Copy prompts in a click",
+      "Works on any device, instantly",
+      "Free, no sign-up required"
+    ],
+    useCases: [
+      "Parties and game night",
+      "Sleepovers and hangouts",
+      "Road trips and long car rides",
+      "Ice-breakers for new groups",
+      "Date night and getting to know someone",
+      "Team-building and group bonding"
+    ]
   }
 };
 

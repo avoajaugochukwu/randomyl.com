@@ -1,11 +1,12 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { Phone, Type, Book, Box, QrCode, Hash, WholeWord, Palette, SpellCheck,
   ALargeSmall, Droplet, PawPrint, Users, Flag, Scale, Quote, HelpCircle,
-  Lightbulb, Smile, Flame, AtSign, Drama, Split, Gem } from 'lucide-react';
+  Lightbulb, Smile, Flame, AtSign, Drama, Split, Gem, Brain, Hand } from 'lucide-react';
 
 export type ToolKey = 'phone' | 'noun' | 'bible' | 'object' | 'qr' | 'number' | 'word' | 'pictionary' | 'pos'
   | 'letter' | 'color' | 'animal' | 'team' | 'country' | 'decision' | 'sentence' | 'question'
-  | 'fact' | 'emoji' | 'truthordare' | 'username' | 'charname' | 'wouldyourather' | 'moodring';
+  | 'fact' | 'emoji' | 'truthordare' | 'username' | 'charname' | 'wouldyourather' | 'moodring'
+  | 'trivia' | 'neverhaveiever';
 
 export interface Tool {
   key: ToolKey;
@@ -232,6 +233,24 @@ export const tools: Tool[] = [
     iconColor: '#7c3aed',
     route: 'mood-ring-generator',
     description: 'Tap for a random mood-ring color and what it means — from calm blue to stressed black. Free and just for fun.',
+    comingSoon: false
+  },
+  {
+    key: 'trivia',
+    label: 'Trivia Questions Generator',
+    icon: Brain,
+    iconColor: '#0891b2',
+    route: 'trivia-questions-generator',
+    description: 'Random trivia questions with answers, across general knowledge, history, science, movies, sports, and more. Free — perfect for quiz night.',
+    comingSoon: false
+  },
+  {
+    key: 'neverhaveiever',
+    label: 'Never Have I Ever Generator',
+    icon: Hand,
+    iconColor: '#db2777',
+    route: 'never-have-i-ever-generator',
+    description: 'Random Never Have I Ever prompts by category — classic, funny, party, couples, and kid-friendly. Free and instant for game night.',
     comingSoon: false
   }
 ];

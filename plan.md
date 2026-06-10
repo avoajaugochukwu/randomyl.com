@@ -88,11 +88,9 @@ team game). Unverifiable claims were cut, not guessed.
 Mined 2,027 blog-intent keywords ($0.63). Prioritized by volume ÷ difficulty. These are the seeds
 for the next content fan-out.
 
-### Tier 1 — huge volume, KD 0–6 (do next)
-- **Trivia Questions** — `trivia questions` **165,000 · KD 6**. Big categorized listicle (by topic +
-  difficulty) → `/tools/random-question-generator`. Highest single opportunity in round 2.
-- **Never Have I Ever Questions** — `never have i ever questions` **90,500 · KD 0**. Game-question
-  listicle (clean / friends / couples / spicy-tasteful) → random-question/truth-or-dare.
+### Tier 1 — huge volume, KD 0–6
+- **Trivia Questions** — `trivia questions` **165,000 · KD 6**. ✅ **DONE** — built `/tools/trivia-questions-generator` (8 categories, ~90 verified Q&A, per-card answer reveal).
+- **Never Have I Ever Questions** — `never have i ever questions` **90,500 · KD 0**. ✅ **DONE** — built `/tools/never-have-i-ever-generator` (5 categories incl. kids/couples).
 - **"Words that end in [X]" template** — `5 letter words ending in e` **90,500 · KD 0** (and the full
   ending-in family). Mirror of the words-that-start-with template: `/words-that-end-in/[letter]` or
   a Wordle-helper. Reuse `wordsByLetter` data, just filter by suffix.
