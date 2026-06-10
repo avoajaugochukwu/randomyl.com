@@ -99,9 +99,9 @@ for the next content fan-out.
 
 ### Tier 2 — strong clusters to expand
 - **Color cluster** (mood-ring already shipped):
-  - `what does the color blue and green make` (color mixing) — 33,100 · KD 0 (whole "X and Y make" family 22–33k KD 0).
-  - `aura colors meaning` — 12,100 · KD 0.
-  - `what does the color purple mean/symbolize` — 18–22k · KD 2–16.
+  - `what does the color blue and green make` (color mixing) — 33,100 · KD 0. ✅ **DONE** — built `/tools/color-mixer` (paint-style 2-color mixer) + `/blog/color-mixing-guide` (primaries/secondaries/tints/shades + paint-vs-light, full chart).
+  - `aura colors meaning` — 12,100 · KD 0. (still open — listicle → color generator)
+  - `what does the color purple mean/symbolize` — 18–22k · KD 2–16. (still open — per-color meaning posts)
 - **Game-question cluster** (4 posts shipped): `this or that questions`, `hot seat questions`,
   `most likely to questions`, `20 questions game` — all game listicles → random-question generator.
 - **"Questions to ask" cluster**: `questions to ask a guy` 60,500 · KD 12; `deep questions to ask`
