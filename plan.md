@@ -91,9 +91,10 @@ for the next content fan-out.
 ### Tier 1 — huge volume, KD 0–6
 - **Trivia Questions** — `trivia questions` **165,000 · KD 6**. ✅ **DONE** — built `/tools/trivia-questions-generator` (8 categories, ~90 verified Q&A, per-card answer reveal).
 - **Never Have I Ever Questions** — `never have i ever questions` **90,500 · KD 0**. ✅ **DONE** — built `/tools/never-have-i-ever-generator` (5 categories incl. kids/couples).
-- **"Words that end in [X]" template** — `5 letter words ending in e` **90,500 · KD 0** (and the full
-  ending-in family). Mirror of the words-that-start-with template: `/words-that-end-in/[letter]` or
-  a Wordle-helper. Reuse `wordsByLetter` data, just filter by suffix.
+- **"Words that end in [X]" template** — `5 letter words ending in e` **90,500 · KD 0**. ✅ **DONE** —
+  built `/words-that-end-in` hub + 26 `/words-that-end-in/[letter]` pages (grouped by length, random
+  picker, JSON-LD, sitemap, cross-linked with the start-with hub). Data regrouped by final letter +
+  dictionary-validated supplements for rare endings (j/q/v are honestly sparse).
 - **Words that start with X page** already shipped — confirmed `words that start with x` 110,000 · KD 0.
 
 ### Tier 2 — strong clusters to expand

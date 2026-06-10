@@ -64,7 +64,9 @@ export default function WordsHubPage() {
         </div>
 
         <p className="prose-intro">
-          Looking for a random word instead of a list? Try the{' '}
+          Need the other end of the word? Browse{' '}
+          <Link href="/words-that-end-in">words that end in each letter</Link>. Looking for a random
+          word instead of a list? Try the{' '}
           <Link href="/tools/random-word-generator">random word generator</Link>, or spin up a random
           letter to start a fresh round with the{' '}
           <Link href="/tools/random-letter-generator">random letter generator</Link>.

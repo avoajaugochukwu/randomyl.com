@@ -69,6 +69,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly' as const,
       priority: 0.6,
     })),
+    {
+      url: `${baseUrl}/words-that-end-in`,
+      lastModified: formattedDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    },
+    ...letters.map((c) => ({
+      url: `${baseUrl}/words-that-end-in/${c}`,
+      lastModified: formattedDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.6,
+    })),
   ];
 
   // Combine static and dynamic URLs

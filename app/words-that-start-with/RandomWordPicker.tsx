@@ -2,7 +2,15 @@
 
 import { useState } from 'react';
 
-export default function RandomWordPicker({ words, letter }: { words: string[]; letter: string }) {
+export default function RandomWordPicker({
+  words,
+  letter,
+  relation = 'starting with',
+}: {
+  words: string[];
+  letter: string;
+  relation?: string;
+}) {
   const [pick, setPick] = useState<string | null>(null);
 
   function roll() {
@@ -18,7 +26,7 @@ export default function RandomWordPicker({ words, letter }: { words: string[]; l
   return (
     <div className="word-picker">
       <button type="button" className="btn btn-accent" onClick={roll}>
-        🎲 Random word starting with {letter.toUpperCase()}
+        🎲 Random word {relation} {letter.toUpperCase()}
       </button>
       {pick && <span className="word-picker-result">{pick}</span>}
     </div>
