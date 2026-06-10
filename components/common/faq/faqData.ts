@@ -18,6 +18,11 @@ import { countryFaqs } from './data/countryFaqs';
 import { decisionFaqs } from './data/decisionFaqs';
 import { sentenceFaqs } from './data/sentenceFaqs';
 import { questionFaqs } from './data/questionFaqs';
+import { factFaqs } from './data/factFaqs';
+import { emojiFaqs } from './data/emojiFaqs';
+import { truthordareFaqs } from './data/truthordareFaqs';
+import { usernameFaqs } from './data/usernameFaqs';
+import { charnameFaqs } from './data/charnameFaqs';
 
 export type FAQType = 'homepage' | ToolKey;
 
@@ -59,6 +64,16 @@ export const getFAQs = (type: FAQType): FAQItemType[] => {
       return sentenceFaqs;
     case 'question':
       return questionFaqs;
+    case 'fact':
+      return factFaqs;
+    case 'emoji':
+      return emojiFaqs;
+    case 'truthordare':
+      return truthordareFaqs;
+    case 'username':
+      return usernameFaqs;
+    case 'charname':
+      return charnameFaqs;
     default:
       return [];
   }

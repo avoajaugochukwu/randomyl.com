@@ -1,9 +1,11 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { Phone, Type, Book, Box, QrCode, Hash, WholeWord, Palette, SpellCheck,
-  ALargeSmall, Droplet, PawPrint, Users, Flag, Scale, Quote, HelpCircle } from 'lucide-react';
+  ALargeSmall, Droplet, PawPrint, Users, Flag, Scale, Quote, HelpCircle,
+  Lightbulb, Smile, Flame, AtSign, Drama } from 'lucide-react';
 
 export type ToolKey = 'phone' | 'noun' | 'bible' | 'object' | 'qr' | 'number' | 'word' | 'pictionary' | 'pos'
-  | 'letter' | 'color' | 'animal' | 'team' | 'country' | 'decision' | 'sentence' | 'question';
+  | 'letter' | 'color' | 'animal' | 'team' | 'country' | 'decision' | 'sentence' | 'question'
+  | 'fact' | 'emoji' | 'truthordare' | 'username' | 'charname';
 
 export interface Tool {
   key: ToolKey;
@@ -167,6 +169,51 @@ export const tools: Tool[] = [
     iconColor: '#0891b2',
     route: 'random-question-generator',
     description: 'Generate random questions and conversation starters — fun, deep, or ice-breakers. Great for groups and games.',
+    comingSoon: false
+  },
+  {
+    key: 'fact',
+    label: 'Random Fact Generator',
+    icon: Lightbulb,
+    iconColor: '#f59e0b',
+    route: 'random-fact-generator',
+    description: 'Discover random, verified true facts across science, space, animals, history, and more. Fun and family-friendly.',
+    comingSoon: false
+  },
+  {
+    key: 'emoji',
+    label: 'Random Emoji Generator',
+    icon: Smile,
+    iconColor: '#eab308',
+    route: 'random-emoji-generator',
+    description: 'Generate random emojis by category — copy one or a whole set in a click. Fun for chats, posts, and games.',
+    comingSoon: false
+  },
+  {
+    key: 'truthordare',
+    label: 'Truth or Dare Generator',
+    icon: Flame,
+    iconColor: '#dc2626',
+    route: 'truth-or-dare-generator',
+    description: 'Random truth questions and dare challenges by difficulty. Free and instant — perfect for parties and game night.',
+    comingSoon: false
+  },
+  {
+    key: 'username',
+    label: 'Random Username Generator',
+    icon: AtSign,
+    iconColor: '#0d9488',
+    route: 'random-username-generator',
+    description: 'Generate unique, available-looking usernames and handles for gaming, social, and sign-ups. Instant and free.',
+    comingSoon: false
+  },
+  {
+    key: 'charname',
+    label: 'Character Name Generator',
+    icon: Drama,
+    iconColor: '#7c3aed',
+    route: 'character-name-generator',
+    description: 'Generate character names for stories and games — fantasy or realistic, by style. Great for writers and RPGs.',
     comingSoon: false
   }
 ];

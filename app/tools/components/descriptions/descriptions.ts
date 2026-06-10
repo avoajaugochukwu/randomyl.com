@@ -381,6 +381,116 @@ const toolDescriptions: Record<ToolKey, ToolDescription> = {
       "Journaling prompts",
       "Party and road-trip games"
     ]
+  },
+  fact: {
+    about: {
+      title: "Random Fact Generator",
+      description: "Our random fact generator surfaces fascinating, verified true facts across science, space, animals, history, the human body, geography, and food. Every fact is human-reviewed and evergreen — generate one or a whole batch to learn something new."
+    },
+    features: [
+      "Hand-verified, accurate facts",
+      "Seven categories to choose from",
+      "Generate one or many at once",
+      "Family-friendly and evergreen",
+      "Copy your facts in a click",
+      "Free, instant, no sign-up"
+    ],
+    useCases: [
+      "Trivia and quizzes",
+      "Classroom warm-ups",
+      "Conversation starters",
+      "Social media posts",
+      "Beating boredom",
+      "Learning something new daily"
+    ]
+  },
+  emoji: {
+    about: {
+      title: "Random Emoji Generator",
+      description: "Our random emoji generator picks emojis at random from categories like faces, animals, food, and symbols. Generate a single emoji or a whole string and copy them in a tap — fun for chats, captions, and games."
+    },
+    features: [
+      "Pick by category or all emojis",
+      "Generate one or a whole set",
+      "Tap any emoji to copy it",
+      "Copy the whole string at once",
+      "Works on mobile and desktop",
+      "Free, instant, no sign-up"
+    ],
+    useCases: [
+      "Chats and messaging",
+      "Social media captions",
+      "Emoji guessing games",
+      "Passwords and nicknames",
+      "Creative prompts",
+      "Just for fun"
+    ]
+  },
+  truthordare: {
+    about: {
+      title: "Truth or Dare Generator",
+      description: "Our truth or dare generator delivers random truth questions and dare challenges by difficulty, so the game never stalls. Choose truths, dares, or a mix and keep the laughs coming — no cards needed."
+    },
+    features: [
+      "Random truths and dares",
+      "Easy, medium, and bold levels",
+      "Truths-only, dares-only, or mixed",
+      "Generate one or a list",
+      "Family-friendly options",
+      "Free, instant, no sign-up"
+    ],
+    useCases: [
+      "Parties and game night",
+      "Sleepovers",
+      "Road trips",
+      "Ice-breakers",
+      "Team-building",
+      "Group hangouts"
+    ]
+  },
+  username: {
+    about: {
+      title: "Random Username Generator",
+      description: "Our random username generator combines words, styles, and numbers into unique, memorable handles. Generate a batch of ideas for gaming, social media, and new accounts, then copy your favorite in a click."
+    },
+    features: [
+      "Unique, memorable username ideas",
+      "Different styles and patterns",
+      "Optional numbers and separators",
+      "Generate a batch at once",
+      "Copy any username in a click",
+      "Free, instant, no sign-up"
+    ],
+    useCases: [
+      "Gaming and gamertags",
+      "Social media handles",
+      "New account sign-ups",
+      "Forums and communities",
+      "Streaming and content",
+      "Burner and alt accounts"
+    ]
+  },
+  charname: {
+    about: {
+      title: "Character Name Generator",
+      description: "Our character name generator creates names for stories, games, and worlds — fantasy or realistic, in a range of styles. Generate a list of options to name heroes, villains, NPCs, and everyone in between."
+    },
+    features: [
+      "Fantasy and realistic styles",
+      "Male, female, and neutral options",
+      "First and last name combinations",
+      "Generate a batch of ideas",
+      "Copy any name in a click",
+      "Free, instant, no sign-up"
+    ],
+    useCases: [
+      "Novels and short stories",
+      "Tabletop RPGs and D&D",
+      "Video game characters",
+      "Screenwriting and worldbuilding",
+      "Role-play and fan fiction",
+      "Naming NPCs and avatars"
+    ]
   }
 };
 

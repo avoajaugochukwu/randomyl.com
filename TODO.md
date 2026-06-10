@@ -12,13 +12,17 @@
 - [x] Random Sentence Generator — KD 4 · 6.6K/mo → /tools/random-sentence-generator
 - [x] Random Question Generator — KD 11 · 6.6K/mo → /tools/random-question-generator
 
-### Batch 3 — backlog (still easy, build next)
-- [ ] Random Username Generator — KD 22 · 14.8K/mo
-- [ ] Character Name Generator — KD 19 · 12.1K/mo
-- [ ] Random Fact Generator — KD 2 · 2.4K/mo
-- [ ] Random Emoji Generator — KD 0 · 2.9K/mo
-- [ ] Truth or Dare Generator — KD 0 · 1.9K/mo
-- [ ] Random Name Generator — KD 25 · 201K/mo (big; dedicated push)
+### Batch 3 — DONE (built & verified, 2026-06-09)
+- [x] Random Username Generator — KD 22 · 14.8K/mo → /tools/random-username-generator
+- [x] Character Name Generator — KD 19 · 12.1K/mo → /tools/character-name-generator
+- [x] Random Fact Generator — KD 2 · 2.4K/mo → /tools/random-fact-generator (facts Perplexity-sourced + human-reviewed)
+- [x] Random Emoji Generator — KD 0 · 2.9K/mo → /tools/random-emoji-generator
+- [x] Truth or Dare Generator — KD 0 · 1.9K/mo → /tools/truth-or-dare-generator
+
+### Batch 4 — the big one (its own research + build pass)
+- [ ] Random Name Generator — KD 25 · 201K/mo. Hub + variant fanout (first/last, by gender,
+      baby names, fantasy, business, gamertag, pet, band names…). Do a dedicated keyword
+      fanout on the name-generator universe first, then build hub + ~10–15 variants.
 
 ### Deferred — Google widgets / brand-owned SERPs (low ROI for now)
 - [ ] Wheel of Names — 1.2M/mo but SERP owned by wheelofnames.com (needs real interactive wheel)
