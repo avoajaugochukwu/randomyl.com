@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { Phone, Type, Book, Box, QrCode } from 'lucide-react';
+import { Phone, Type, Book, Box, QrCode, Hash, WholeWord, Palette, SpellCheck } from 'lucide-react';
 
-export type ToolKey = 'phone' | 'noun' | 'bible' | 'object' | 'qr';
+export type ToolKey = 'phone' | 'noun' | 'bible' | 'object' | 'qr' | 'number' | 'word' | 'pictionary' | 'pos';
 
 export interface Tool {
   key: ToolKey;
@@ -57,6 +57,42 @@ export const tools: Tool[] = [
     iconColor: '#f59e0b',
     route: 'random-qr-code-generator',
     description: 'Generate random QR codes with custom content and styling',
+    comingSoon: false
+  },
+  {
+    key: 'number',
+    label: 'Random Number Generator',
+    icon: Hash,
+    iconColor: '#0891b2',
+    route: 'random-number-generator',
+    description: 'Pick random numbers in any range — single or bulk, with no-repeat and sorting options. Instant and free.',
+    comingSoon: false
+  },
+  {
+    key: 'word',
+    label: 'Random Word Generator',
+    icon: WholeWord,
+    iconColor: '#db2777',
+    route: 'random-word-generator',
+    description: 'Generate random English words by length or starting letter. Perfect for games, brainstorming, and writing prompts.',
+    comingSoon: false
+  },
+  {
+    key: 'pictionary',
+    label: 'Pictionary Word Generator',
+    icon: Palette,
+    iconColor: '#7c3aed',
+    route: 'pictionary-word-generator',
+    description: 'Random Pictionary and charades words by difficulty — easy for kids, hard for adults. Ready for game night.',
+    comingSoon: false
+  },
+  {
+    key: 'pos',
+    label: 'Random Adjective Generator',
+    icon: SpellCheck,
+    iconColor: '#ea580c',
+    route: 'random-adjective-generator',
+    description: 'Generate random adjectives, verbs, nouns, and adverbs by part of speech. Great for writing and grammar practice.',
     comingSoon: false
   }
 ];

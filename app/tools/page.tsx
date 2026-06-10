@@ -2,6 +2,9 @@ import { Metadata } from 'next';
 import Hero from '@/components/common/Hero';
 import ToolsList from '@/components/tools/ToolsList';
 import { baseUrl } from '@/app/metadata';
+import { tools } from '@/app/config/tools';
+
+const liveCount = tools.filter((t) => !t.comingSoon).length;
 
 export const metadata: Metadata = {
   title: 'Random Generator Tools',
@@ -25,7 +28,7 @@ export default function ToolsPage() {
       <Hero
         title="The Generators"
         description="Every Randomyl tool in one place — pick one, tune it, and roll. Free, instant, and no sign-up required."
-        tag="Tools · 5 live"
+        tag={`Tools · ${liveCount} live`}
         crumb={[{ label: 'Home', href: '/' }, { label: 'Tools' }]}
       />
       <ToolsList />

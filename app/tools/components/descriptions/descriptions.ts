@@ -117,6 +117,94 @@ const toolDescriptions: Record<ToolKey, ToolDescription> = {
       "WiFi sharing",
       "Testing and development"
     ]
+  },
+  number: {
+    about: {
+      title: "Random Number Generator",
+      description: "Our random number generator picks numbers in any range you set, instantly and right in your browser. Generate a single number or thousands at once, force unique results with no repeats, and sort them however you like — no sign-up and no limits."
+    },
+    features: [
+      "Any minimum and maximum range",
+      "Single pick or bulk generation (up to 10,000)",
+      "No-repeat (unique) mode",
+      "Sort low-to-high, high-to-low, or random order",
+      "One-click copy",
+      "Runs fully in your browser — fast and private"
+    ],
+    useCases: [
+      "Raffles and giveaway draws",
+      "Lottery and bingo numbers",
+      "Picking a random winner",
+      "Classroom and games",
+      "Sampling and research",
+      "Software testing and mock data"
+    ]
+  },
+  word: {
+    about: {
+      title: "Random Word Generator",
+      description: "Our random word generator produces real English words on demand. Filter by exact length or starting letter, generate one word or a whole list, and copy your results in a click — perfect for games, brainstorming, and beating writer's block."
+    },
+    features: [
+      "Filter by word length",
+      "Filter by starting letter",
+      "Generate up to 50 words at once",
+      "Copy as a list or comma-separated",
+      "Family-friendly word bank",
+      "Instant, no sign-up, works offline"
+    ],
+    useCases: [
+      "Word games and puzzles",
+      "Brainstorming and ideation",
+      "Creative writing prompts",
+      "Vocabulary practice",
+      "Password inspiration",
+      "Improv and party games"
+    ]
+  },
+  pictionary: {
+    about: {
+      title: "Pictionary Word Generator",
+      description: "Our Pictionary and charades word generator serves up random prompts sorted by difficulty, so game night runs itself. Switch between draw-it (Pictionary) and act-it (charades) modes, choose easy, medium, or hard, and generate a single word or a full round."
+    },
+    features: [
+      "Pictionary (draw) and charades (act) modes",
+      "Easy, medium, and hard difficulty levels",
+      "Kid-friendly and adult-friendly words",
+      "Generate one word or a whole round",
+      "Copy the full list",
+      "No sign-up — start playing instantly"
+    ],
+    useCases: [
+      "Family game night",
+      "Classroom and ESL activities",
+      "Office team-building",
+      "Parties and ice-breakers",
+      "Birthday and holiday games",
+      "Drama and improv warm-ups"
+    ]
+  },
+  pos: {
+    about: {
+      title: "Random Adjective Generator",
+      description: "Our part-of-speech generator gives you random adjectives, verbs, nouns, and adverbs at the tap of a button. Pick the word type you need and generate a list instantly — ideal for writing exercises, grammar lessons, and word games."
+    },
+    features: [
+      "Adjectives, verbs, nouns, and adverbs",
+      "Switch part of speech instantly",
+      "Generate up to 30 words at once",
+      "Copy as a list or comma-separated",
+      "Curated, family-friendly word banks",
+      "Free, instant, no sign-up"
+    ],
+    useCases: [
+      "Creative writing prompts",
+      "Grammar and ESL lessons",
+      "Mad Libs-style games",
+      "Describing-word exercises",
+      "Brainstorming and naming",
+      "Vocabulary building"
+    ]
   }
 };
 
