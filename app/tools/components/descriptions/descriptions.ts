@@ -579,6 +579,28 @@ const toolDescriptions: Record<ToolKey, ToolDescription> = {
       "Date night and getting to know someone",
       "Team-building and group bonding"
     ]
+  },
+  colormixer: {
+    about: {
+      title: "Color Mixer",
+      description: "Our color mixer shows you what two colors make when you blend them, based on paint and pigment (subtractive) mixing — the kind you do with paints, markers, and dyes. Pick any two colors and instantly see the result with a live swatch."
+    },
+    features: [
+      "Mix any two of ten common colors",
+      "Instant result with a live color swatch",
+      "Based on real paint / pigment mixing",
+      "Plain-language answer for each pair",
+      "Works on any device, no sign-up",
+      "Free and ad-light"
+    ],
+    useCases: [
+      "Painting, crafts, and art class",
+      "Answering 'what does X and Y make?'",
+      "Mixing custom paint or icing colors",
+      "Design and color-theory learning",
+      "Kids' color experiments",
+      "Planning a palette before you buy paint"
+    ]
   }
 };
 

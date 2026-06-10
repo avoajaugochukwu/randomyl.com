@@ -1,10 +1,13 @@
 import Link from 'next/link';
 import ToolsList from '@/components/tools/ToolsList';
+import ToolSearch from '@/components/tools/ToolSearch';
 import { PostRow } from '@/components/PostRow';
 import { getAllPosts } from '@/lib/posts';
+import { buildSearchIndex } from '@/lib/search';
 
 export default function Home() {
   const posts = getAllPosts().slice(0, 4);
+  const searchIndex = buildSearchIndex();
 
   return (
     <>
@@ -54,7 +57,9 @@ export default function Home() {
       </header>
 
       {/* TOOLS */}
-      <ToolsList />
+      <ToolSearch index={searchIndex}>
+        <ToolsList />
+      </ToolSearch>
 
       {/* STRIP */}
       <section className="strip">

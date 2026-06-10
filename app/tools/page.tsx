@@ -1,8 +1,10 @@
 import { Metadata } from 'next';
 import Hero from '@/components/common/Hero';
 import ToolsList from '@/components/tools/ToolsList';
+import ToolSearch from '@/components/tools/ToolSearch';
 import { baseUrl } from '@/app/metadata';
 import { tools } from '@/app/config/tools';
+import { buildSearchIndex } from '@/lib/search';
 
 const liveCount = tools.filter((t) => !t.comingSoon).length;
 
@@ -23,6 +25,7 @@ export const metadata: Metadata = {
 };
 
 export default function ToolsPage() {
+  const searchIndex = buildSearchIndex();
   return (
     <>
       <Hero
@@ -31,7 +34,9 @@ export default function ToolsPage() {
         tag={`Tools · ${liveCount} live`}
         crumb={[{ label: 'Home', href: '/' }, { label: 'Tools' }]}
       />
-      <ToolsList />
+      <ToolSearch index={searchIndex}>
+        <ToolsList />
+      </ToolSearch>
     </>
   );
 }

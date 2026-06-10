@@ -27,6 +27,7 @@ import { wouldyouratherFaqs } from './data/wouldyouratherFaqs';
 import { moodringFaqs } from './data/moodringFaqs';
 import { triviaFaqs } from './data/triviaFaqs';
 import { neverhaveieverFaqs } from './data/neverhaveieverFaqs';
+import { colormixerFaqs } from './data/colormixerFaqs';
 
 export type FAQType = 'homepage' | ToolKey;
 
@@ -86,6 +87,8 @@ export const getFAQs = (type: FAQType): FAQItemType[] => {
       return triviaFaqs;
     case 'neverhaveiever':
       return neverhaveieverFaqs;
+    case 'colormixer':
+      return colormixerFaqs;
     default:
       return [];
   }
