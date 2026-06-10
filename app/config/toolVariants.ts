@@ -5,6 +5,8 @@ export interface NumberPreset { min?: number; max?: number; count?: number; uniq
 export interface WordPreset { count?: number; letters?: number; startsWith?: string; }
 export interface PictionaryPreset { mode?: 'pictionary' | 'charades'; difficulty?: 'easy' | 'medium' | 'hard'; count?: number; }
 export interface PosPreset { initial?: 'adjective' | 'verb' | 'noun' | 'adverb'; }
+export interface TeamPreset { unitLabel?: 'Team' | 'Group'; units?: number; }
+export interface DecisionPreset { mode?: 'options' | 'yesno'; }
 
 export interface ToolVariant {
   slug: string;        // URL segment under the hub route
@@ -12,7 +14,7 @@ export interface ToolVariant {
   metaTitle: string;   // <title>
   description: string; // meta description
   intro: string;       // unique above-the-tool copy
-  preset: NumberPreset | WordPreset | PictionaryPreset | PosPreset;
+  preset: NumberPreset | WordPreset | PictionaryPreset | PosPreset | TeamPreset | DecisionPreset;
 }
 
 export interface VariantHub {
@@ -51,6 +53,14 @@ const pictionaryVariants: ToolVariant[] = [
   { slug: 'charades-for-adults', h1: 'Charades Word Generator for Adults', metaTitle: 'Charades for Adults — Word Generator (Hard)', description: 'Hard charades ideas for adults — tricky actions and scenarios to act out. Free and ready for game night.', intro: 'Charades on hard mode, tuned for adults — trickier actions and funny scenarios to act out. Generate a prompt per turn or a list for the whole round.', preset: { mode: 'charades', difficulty: 'hard', count: 1 } },
 ];
 
+const teamVariants: ToolVariant[] = [
+  { slug: 'groups', h1: 'Random Group Generator', metaTitle: 'Random Group Generator', description: 'Split a list of names into random, evenly-sized groups. Free and instant — perfect for classrooms and workshops.', intro: 'Paste your names and this tool splits them into fair, random groups. Set how many groups you want and shuffle as often as you like. Switch to teams anytime below.', preset: { unitLabel: 'Group', units: 3 } },
+];
+
+const decisionVariants: ToolVariant[] = [
+  { slug: 'yes-or-no', h1: 'Yes or No Generator', metaTitle: 'Yes or No Generator — Random Answer', description: 'Get a random yes or no answer in one tap. A simple, unbiased decision maker for quick questions.', intro: 'Need a quick yes or no? Tap the button for a random, unbiased answer. For choices with more than two options, switch to the full decision maker below.', preset: { mode: 'yesno' } },
+];
+
 const posVariants: ToolVariant[] = [
   { slug: 'verbs', h1: 'Random Verb Generator', metaTitle: 'Random Verb Generator', description: 'Generate random verbs (action words) instantly. Free — great for writing prompts, grammar practice, and games.', intro: 'This generator is set to verbs — action words like sprint, shatter, and wander. Generate a list for writing prompts, grammar lessons, or Mad Libs. Switch to adjectives, nouns, or adverbs anytime below.', preset: { initial: 'verb' } },
   { slug: 'adverbs', h1: 'Random Adverb Generator', metaTitle: 'Random Adverb Generator', description: 'Generate random adverbs instantly — words like quickly and silently. Free, for writing and grammar practice.', intro: 'Preset to adverbs — words that modify verbs, usually ending in ‑ly, like quickly and silently. Handy for grammar exercises and writing prompts. Change the part of speech below.', preset: { initial: 'adverb' } },
@@ -61,6 +71,8 @@ export const variantHubs: VariantHub[] = [
   { key: 'word', hubRoute: 'random-word-generator', hubLabel: 'Word Generator', variantsHeading: 'By word length', variants: wordVariants },
   { key: 'pictionary', hubRoute: 'pictionary-word-generator', hubLabel: 'Pictionary Generator', variantsHeading: 'Pictionary & charades modes', variants: pictionaryVariants },
   { key: 'pos', hubRoute: 'random-adjective-generator', hubLabel: 'Adjective Generator', variantsHeading: 'Other parts of speech', variants: posVariants },
+  { key: 'team', hubRoute: 'random-team-generator', hubLabel: 'Team Generator', variantsHeading: 'Teams & groups', variants: teamVariants },
+  { key: 'decision', hubRoute: 'decision-maker', hubLabel: 'Decision Maker', variantsHeading: 'Decision modes', variants: decisionVariants },
 ];
 
 export function getHub(hubRoute: string): VariantHub | undefined {

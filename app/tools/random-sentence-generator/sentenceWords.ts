@@ -1,0 +1,57 @@
+export const banks = {
+  adjective: [
+    'curious', 'brave', 'gentle', 'clever', 'sleepy', 'cheerful', 'tiny',
+    'enormous', 'shiny', 'ancient', 'friendly', 'mysterious', 'bright',
+    'quiet', 'playful', 'graceful', 'bold', 'wise', 'speckled', 'fuzzy',
+    'glittering', 'restless', 'patient', 'eager', 'humble', 'lively',
+    'silvery', 'wandering', 'thoughtful', 'jolly', 'sturdy', 'nimble',
+    'dazzling', 'wild', 'cozy', 'fearless', 'radiant', 'breezy', 'noble',
+    'whimsical',
+  ],
+  noun: [
+    'dog', 'teacher', 'robot', 'mountain', 'painter', 'sailor', 'kitten',
+    'wizard', 'gardener', 'dragon', 'inventor', 'pilot', 'turtle', 'baker',
+    'explorer', 'violinist', 'fox', 'librarian', 'astronaut', 'farmer',
+    'dancer', 'owl', 'scientist', 'traveler', 'fisherman', 'rabbit',
+    'musician', 'sculptor', 'whale', 'knight', 'shepherd', 'student',
+    'penguin', 'detective', 'chef', 'butterfly', 'engineer', 'poet',
+    'hedgehog', 'captain',
+  ],
+  verb: [
+    'chased', 'discovered', 'painted', 'explored', 'imagined', 'invented',
+    'wandered', 'studied', 'gathered', 'whispered', 'climbed', 'sketched',
+    'rescued', 'planted', 'measured', 'celebrated', 'observed', 'collected',
+    'followed', 'repaired', 'designed', 'examined', 'photographed', 'guarded',
+    'mapped', 'juggled', 'balanced', 'organized', 'rehearsed', 'recited',
+    'harvested', 'polished', 'assembled', 'navigated', 'decorated', 'sorted',
+    'inspected', 'sculpted', 'composed', 'greeted',
+  ],
+  adverb: [
+    'quickly', 'silently', 'carefully', 'happily', 'gracefully', 'boldly',
+    'patiently', 'cheerfully', 'quietly', 'eagerly', 'gently', 'cleverly',
+    'bravely', 'swiftly', 'calmly', 'curiously', 'proudly', 'neatly',
+    'merrily', 'thoughtfully', 'steadily', 'joyfully', 'kindly', 'busily',
+    'softly', 'brightly', 'smoothly', 'warmly', 'wisely', 'fondly',
+  ],
+  place: [
+    'in the garden', 'at the station', 'on the moon', 'by the river',
+    'under the old oak', 'near the lighthouse', 'inside the museum',
+    'across the meadow', 'beside the lake', 'on the rooftop',
+    'in the library', 'at the harbor', 'beneath the stars', 'in the forest',
+    'along the coast', 'at the market', 'on the hilltop', 'in the kitchen',
+    'by the campfire', 'at the playground', 'inside the workshop',
+    'on the trail', 'in the orchard', 'near the waterfall',
+    'at the observatory',
+  ],
+};
+
+export const templates: string[] = [
+  'The {adjective} {noun} {verb} {adverb} {place}.',
+  'A {adjective} {noun} {verb} {place} while a {noun} watched.',
+  '{place}, the {adjective} {noun} {verb} {adverb}.',
+  'Every morning, the {noun} {verb} {adverb} {place}.',
+  'The {noun} {verb} {place}, and the {adjective} {noun} smiled.',
+  'With a {adjective} grin, the {noun} {verb} {adverb} {place}.',
+  'Once, a {adjective} {noun} {verb} {place} all day long.',
+  'The {adjective} {noun} and the {adjective} {noun} {verb} {adverb}.',
+];

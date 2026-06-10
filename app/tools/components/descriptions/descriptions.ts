@@ -205,6 +205,182 @@ const toolDescriptions: Record<ToolKey, ToolDescription> = {
       "Brainstorming and naming",
       "Vocabulary building"
     ]
+  },
+  letter: {
+    about: {
+      title: "Random Letter Generator",
+      description: "Our random letter generator picks letters of the alphabet at random, right in your browser. Choose uppercase or lowercase, the whole alphabet or just vowels or consonants, and generate one letter or a whole set instantly."
+    },
+    features: [
+      "Pick from A–Z, vowels only, or consonants only",
+      "Uppercase or lowercase output",
+      "Generate one letter or many at once",
+      "Optional no-repeat mode",
+      "One-click copy",
+      "Instant and free, no sign-up"
+    ],
+    useCases: [
+      "Word and alphabet games",
+      "Classroom and early-reading activities",
+      "Picking a random starting letter",
+      "Name and brainstorming prompts",
+      "Drawing prompts and challenges",
+      "Scattergories-style games"
+    ]
+  },
+  color: {
+    about: {
+      title: "Random Color Generator",
+      description: "Our random color generator creates colors at random and shows each one as a live swatch with its hex and RGB codes. Generate a single color or a full palette and copy the codes in one click — perfect for design and inspiration."
+    },
+    features: [
+      "Live color swatches",
+      "Hex and RGB codes for every color",
+      "Generate one color or a whole palette",
+      "Click to copy any code",
+      "Endless fresh combinations",
+      "Free, instant, no sign-up"
+    ],
+    useCases: [
+      "Web and graphic design",
+      "Brand and palette inspiration",
+      "Art and illustration",
+      "UI and theme prototyping",
+      "Beating creative block",
+      "Color games and learning"
+    ]
+  },
+  animal: {
+    about: {
+      title: "Random Animal Generator",
+      description: "Our random animal generator picks animals at random from a big, family-friendly list spanning mammals, birds, reptiles, sea life, and more. Generate one animal or a whole list for games, writing, and learning."
+    },
+    features: [
+      "Wide range of animals from around the world",
+      "Generate one or many at once",
+      "Family-friendly and kid-safe",
+      "Copy your list in a click",
+      "Great for prompts and games",
+      "Free, instant, no sign-up"
+    ],
+    useCases: [
+      "Kids' games and learning",
+      "Writing and drawing prompts",
+      "Charades and guessing games",
+      "Classroom activities",
+      "Creative brainstorming",
+      "Trivia and quizzes"
+    ]
+  },
+  team: {
+    about: {
+      title: "Random Team Generator",
+      description: "Our random team generator takes your list of names and splits them into fair, random teams or groups. Just paste names, choose how many teams you want, and shuffle — perfect for class, sports, and game night."
+    },
+    features: [
+      "Paste any list of names",
+      "Choose the number of teams or groups",
+      "Fair, evenly-sized random split",
+      "Re-shuffle as many times as you like",
+      "Copy the results in a click",
+      "Free, instant, no sign-up"
+    ],
+    useCases: [
+      "PE class and sports teams",
+      "Classroom group work",
+      "Game night and parties",
+      "Office workshops and breakouts",
+      "Tournaments and brackets",
+      "Any time you need fair teams"
+    ]
+  },
+  country: {
+    about: {
+      title: "Random Country Generator",
+      description: "Our random country generator picks countries at random from around the world, complete with flags and capital cities. Generate one country or a list for geography practice, games, and travel inspiration."
+    },
+    features: [
+      "Random countries from every continent",
+      "Flag and capital city for each",
+      "Generate one or many at once",
+      "Filter by region (where available)",
+      "Copy your list in a click",
+      "Free, instant, no sign-up"
+    ],
+    useCases: [
+      "Geography lessons and quizzes",
+      "Travel and bucket-list ideas",
+      "Trivia and guessing games",
+      "Writing and project prompts",
+      "Language and culture learning",
+      "Classroom activities"
+    ]
+  },
+  decision: {
+    about: {
+      title: "Decision Maker",
+      description: "Our decision maker takes the options you type and picks one at random, so you can settle choices fast and fairly. There's also a one-tap yes-or-no mode for the quickest decisions of all."
+    },
+    features: [
+      "Enter any list of options",
+      "Picks one fairly at random",
+      "Quick yes-or-no mode",
+      "Re-decide as many times as you like",
+      "No bias, no overthinking",
+      "Free, instant, no sign-up"
+    ],
+    useCases: [
+      "Settling group choices",
+      "Picking where to eat",
+      "Breaking a tie",
+      "Yes-or-no questions",
+      "Choosing chores or turns",
+      "Beating decision paralysis"
+    ]
+  },
+  sentence: {
+    about: {
+      title: "Random Sentence Generator",
+      description: "Our random sentence generator builds complete, varied sentences from curated word banks. Generate one sentence or a batch to spark writing, warm up, or practice a language — fresh every time."
+    },
+    features: [
+      "Complete, grammatical sentences",
+      "Fresh combinations every time",
+      "Generate one or several at once",
+      "Family-friendly word banks",
+      "Copy your sentences in a click",
+      "Free, instant, no sign-up"
+    ],
+    useCases: [
+      "Creative writing prompts",
+      "Beating writer's block",
+      "Typing and handwriting practice",
+      "Language learning and ESL",
+      "Warm-up exercises",
+      "Testing fonts and layouts"
+    ]
+  },
+  question: {
+    about: {
+      title: "Random Question Generator",
+      description: "Our random question generator serves up conversation starters, ice-breakers, and thought-provoking questions at random. Pick a vibe and generate questions for groups, dates, classrooms, and games."
+    },
+    features: [
+      "Fun, deep, and ice-breaker questions",
+      "Generate one or a whole set",
+      "Family-friendly options",
+      "Great for groups and pairs",
+      "Copy your questions in a click",
+      "Free, instant, no sign-up"
+    ],
+    useCases: [
+      "Ice-breakers and team-building",
+      "Conversation starters",
+      "Classroom discussion",
+      "Date-night and friends",
+      "Journaling prompts",
+      "Party and road-trip games"
+    ]
   }
 };
 

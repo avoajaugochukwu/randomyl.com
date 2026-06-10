@@ -1,7 +1,9 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { Phone, Type, Book, Box, QrCode, Hash, WholeWord, Palette, SpellCheck } from 'lucide-react';
+import { Phone, Type, Book, Box, QrCode, Hash, WholeWord, Palette, SpellCheck,
+  ALargeSmall, Droplet, PawPrint, Users, Flag, Scale, Quote, HelpCircle } from 'lucide-react';
 
-export type ToolKey = 'phone' | 'noun' | 'bible' | 'object' | 'qr' | 'number' | 'word' | 'pictionary' | 'pos';
+export type ToolKey = 'phone' | 'noun' | 'bible' | 'object' | 'qr' | 'number' | 'word' | 'pictionary' | 'pos'
+  | 'letter' | 'color' | 'animal' | 'team' | 'country' | 'decision' | 'sentence' | 'question';
 
 export interface Tool {
   key: ToolKey;
@@ -93,6 +95,78 @@ export const tools: Tool[] = [
     iconColor: '#ea580c',
     route: 'random-adjective-generator',
     description: 'Generate random adjectives, verbs, nouns, and adverbs by part of speech. Great for writing and grammar practice.',
+    comingSoon: false
+  },
+  {
+    key: 'letter',
+    label: 'Random Letter Generator',
+    icon: ALargeSmall,
+    iconColor: '#0d9488',
+    route: 'random-letter-generator',
+    description: 'Pick random letters A–Z, uppercase or lowercase, vowels or consonants. Instant and free for games and learning.',
+    comingSoon: false
+  },
+  {
+    key: 'color',
+    label: 'Random Color Generator',
+    icon: Droplet,
+    iconColor: '#e11d48',
+    route: 'random-color-generator',
+    description: 'Generate random colors with hex and RGB codes and live swatches. Perfect for design, art, and inspiration.',
+    comingSoon: false
+  },
+  {
+    key: 'animal',
+    label: 'Random Animal Generator',
+    icon: PawPrint,
+    iconColor: '#65a30d',
+    route: 'random-animal-generator',
+    description: 'Generate random animals from around the world. Great for kids, games, writing prompts, and learning.',
+    comingSoon: false
+  },
+  {
+    key: 'team',
+    label: 'Random Team Generator',
+    icon: Users,
+    iconColor: '#2563eb',
+    route: 'random-team-generator',
+    description: 'Paste a list of names and split them into fair, random teams or groups. Free and instant for class and sports.',
+    comingSoon: false
+  },
+  {
+    key: 'country',
+    label: 'Random Country Generator',
+    icon: Flag,
+    iconColor: '#7c3aed',
+    route: 'random-country-generator',
+    description: 'Pick random countries from around the world, with flags and capitals. Great for geography, games, and travel ideas.',
+    comingSoon: false
+  },
+  {
+    key: 'decision',
+    label: 'Decision Maker',
+    icon: Scale,
+    iconColor: '#ca8a04',
+    route: 'decision-maker',
+    description: 'Type your options and let the decision maker pick one at random. Includes a quick yes-or-no mode.',
+    comingSoon: false
+  },
+  {
+    key: 'sentence',
+    label: 'Random Sentence Generator',
+    icon: Quote,
+    iconColor: '#db2777',
+    route: 'random-sentence-generator',
+    description: 'Generate random sentences for writing prompts, brainstorming, and language practice. Free and instant.',
+    comingSoon: false
+  },
+  {
+    key: 'question',
+    label: 'Random Question Generator',
+    icon: HelpCircle,
+    iconColor: '#0891b2',
+    route: 'random-question-generator',
+    description: 'Generate random questions and conversation starters — fun, deep, or ice-breakers. Great for groups and games.',
     comingSoon: false
   }
 ];
