@@ -509,3 +509,48 @@
 .legal p { color: var(--ink-2); margin: 0 0 18px; line-height: 1.7; }
 .legal ul { margin: 0 0 18px; padding-left: 22px; color: var(--ink-2); }
 .legal a { color: var(--ink); text-decoration: underline; text-decoration-color: var(--brand); text-underline-offset: 3px; }
+
+/* ============================================================
+   Word-list pages (/words-that-start-with)
+   ============================================================ */
+.az-nav { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0 24px; }
+.az-link {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-width: 38px; height: 38px; padding: 0 8px;
+  font-family: var(--sans); font-weight: 600; font-size: 15px;
+  border: 1px solid var(--hair-2); border-radius: 10px;
+  color: var(--ink); text-decoration: none; transition: all .15s ease;
+}
+.az-link:hover { border-color: var(--ink); transform: translateY(-1px); }
+.az-link.is-active { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+
+.word-picker { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; margin: 4px 0 28px; }
+.word-picker-result {
+  font-family: var(--sans); font-weight: 700; font-size: 22px;
+  letter-spacing: -0.01em; color: var(--brand);
+}
+
+.prose-intro { font-size: 17px; line-height: 1.7; margin: 0 0 28px; max-width: 70ch; }
+
+.word-group { margin: 0 0 28px; }
+.word-list { font-size: 16px; line-height: 1.9; max-width: 75ch; color: var(--ink); }
+
+.letter-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 12px; margin: 8px 0 28px;
+}
+.letter-card {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 4px; padding: 20px 12px; border: 1px solid var(--hair-2); border-radius: 14px;
+  text-decoration: none; color: var(--ink); transition: all .15s ease;
+}
+.letter-card:hover { border-color: var(--ink); transform: translateY(-2px); }
+.letter-card-letter { font-family: var(--sans); font-weight: 800; font-size: 28px; line-height: 1; }
+.letter-card-count { font-size: 13px; color: var(--ink-soft, #666); }
+
+/* Mood ring generator swatch */
+.mood-ring {
+  width: 150px; height: 150px; border-radius: 50%;
+  border: 6px solid rgba(0,0,0,0.08);
+  transition: background .4s ease, box-shadow .4s ease;
+}

@@ -54,6 +54,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }))
   );
 
+  // Generate URLs for the "words that start with [letter]" word-list hub (A–Z)
+  const letters = 'abcdefghijklmnopqrstuvwxyz'.split('');
+  const wordListUrls = [
+    {
+      url: `${baseUrl}/words-that-start-with`,
+      lastModified: formattedDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    },
+    ...letters.map((c) => ({
+      url: `${baseUrl}/words-that-start-with/${c}`,
+      lastModified: formattedDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.6,
+    })),
+  ];
+
   // Combine static and dynamic URLs
-  return [...routeUrls, ...blogUrls, ...toolUrls, ...variantUrls];
-} 
+  return [...routeUrls, ...blogUrls, ...toolUrls, ...variantUrls, ...wordListUrls];
+}

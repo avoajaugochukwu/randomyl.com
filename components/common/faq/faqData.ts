@@ -23,6 +23,8 @@ import { emojiFaqs } from './data/emojiFaqs';
 import { truthordareFaqs } from './data/truthordareFaqs';
 import { usernameFaqs } from './data/usernameFaqs';
 import { charnameFaqs } from './data/charnameFaqs';
+import { wouldyouratherFaqs } from './data/wouldyouratherFaqs';
+import { moodringFaqs } from './data/moodringFaqs';
 
 export type FAQType = 'homepage' | ToolKey;
 
@@ -74,6 +76,10 @@ export const getFAQs = (type: FAQType): FAQItemType[] => {
       return usernameFaqs;
     case 'charname':
       return charnameFaqs;
+    case 'wouldyourather':
+      return wouldyouratherFaqs;
+    case 'moodring':
+      return moodringFaqs;
     default:
       return [];
   }

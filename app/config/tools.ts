@@ -1,11 +1,11 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { Phone, Type, Book, Box, QrCode, Hash, WholeWord, Palette, SpellCheck,
   ALargeSmall, Droplet, PawPrint, Users, Flag, Scale, Quote, HelpCircle,
-  Lightbulb, Smile, Flame, AtSign, Drama } from 'lucide-react';
+  Lightbulb, Smile, Flame, AtSign, Drama, Split, Gem } from 'lucide-react';
 
 export type ToolKey = 'phone' | 'noun' | 'bible' | 'object' | 'qr' | 'number' | 'word' | 'pictionary' | 'pos'
   | 'letter' | 'color' | 'animal' | 'team' | 'country' | 'decision' | 'sentence' | 'question'
-  | 'fact' | 'emoji' | 'truthordare' | 'username' | 'charname';
+  | 'fact' | 'emoji' | 'truthordare' | 'username' | 'charname' | 'wouldyourather' | 'moodring';
 
 export interface Tool {
   key: ToolKey;
@@ -214,6 +214,24 @@ export const tools: Tool[] = [
     iconColor: '#7c3aed',
     route: 'character-name-generator',
     description: 'Generate character names for stories and games — fantasy or realistic, by style. Great for writers and RPGs.',
+    comingSoon: false
+  },
+  {
+    key: 'wouldyourather',
+    label: 'Would You Rather Generator',
+    icon: Split,
+    iconColor: '#0ea5e9',
+    route: 'would-you-rather-generator',
+    description: 'Random would-you-rather questions by category — funny, hard, deep, and more. Free and instant, perfect for parties and road trips.',
+    comingSoon: false
+  },
+  {
+    key: 'moodring',
+    label: 'Mood Ring Generator',
+    icon: Gem,
+    iconColor: '#7c3aed',
+    route: 'mood-ring-generator',
+    description: 'Tap for a random mood-ring color and what it means — from calm blue to stressed black. Free and just for fun.',
     comingSoon: false
   }
 ];

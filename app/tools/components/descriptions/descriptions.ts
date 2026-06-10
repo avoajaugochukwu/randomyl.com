@@ -491,6 +491,50 @@ const toolDescriptions: Record<ToolKey, ToolDescription> = {
       "Role-play and fan fiction",
       "Naming NPCs and avatars"
     ]
+  },
+  wouldyourather: {
+    about: {
+      title: "Would You Rather Generator",
+      description: "Our would-you-rather generator serves up random either-or questions across categories — funny, hard, deep, food, gross, and kid-friendly. Pick a category or mix them all for an endless supply of dilemmas to debate."
+    },
+    features: [
+      "Seven categories, from funny to deep",
+      "Generate one question or a whole batch",
+      "Family-friendly and kid-safe options",
+      "Copy questions in a click",
+      "Works on any device, instantly",
+      "Free, no sign-up, no ads in the way"
+    ],
+    useCases: [
+      "Parties and game night",
+      "Road trips and long car rides",
+      "Classroom warm-ups and ice-breakers",
+      "Dinner-table conversation",
+      "Team-building and group bonding",
+      "Date night and getting to know someone"
+    ]
+  },
+  moodring: {
+    about: {
+      title: "Mood Ring Generator",
+      description: "Our mood ring generator gives you a random mood-ring color and what it traditionally means — from calm blue to stressed black. It is a playful nod to classic mood rings, which change color with skin temperature rather than reading real emotions."
+    },
+    features: [
+      "Tap for a random mood-ring color",
+      "See the classic meaning behind each color",
+      "Realistic ring color swatch",
+      "Read again as many times as you like",
+      "Works on any device, instantly",
+      "Free, just for fun, no sign-up"
+    ],
+    useCases: [
+      "Fun party and sleepover game",
+      "Ice-breakers and check-ins",
+      "Classroom mood check activities",
+      "A playful daily 'how am I feeling'",
+      "Inspiration for journaling prompts",
+      "Pairing with the mood ring color guide"
+    ]
   }
 };
 

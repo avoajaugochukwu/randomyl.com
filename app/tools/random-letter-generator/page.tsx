@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import Link from 'next/link';
 import LetterGenerator from './LetterGenerator';
 import Hero from '@/components/common/Hero';
 import { FAQList } from '@/components/common/faq/FAQList';
@@ -35,6 +36,13 @@ export default function LetterGeneratorPage() {
       />
       <section className="wrap" id="app">
         <LetterGenerator />
+      </section>
+      <section className="wrap">
+        <p className="prose-intro">
+          Looking for words instead of single letters? Browse{' '}
+          <Link href="/words-that-start-with">words that start with every letter (A–Z)</Link>,
+          grouped by length for Wordle, Scrabble, and word games.
+        </p>
       </section>
       <ToolDescription toolKey="letter" />
       <FAQList type="letter" />

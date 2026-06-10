@@ -19,10 +19,21 @@
 - [x] Random Emoji Generator — KD 0 · 2.9K/mo → /tools/random-emoji-generator
 - [x] Truth or Dare Generator — KD 0 · 1.9K/mo → /tools/truth-or-dare-generator
 
-### Batch 4 — the big one (its own research + build pass)
-- [ ] Random Name Generator — KD 25 · 201K/mo. Hub + variant fanout (first/last, by gender,
-      baby names, fantasy, business, gamertag, pet, band names…). Do a dedicated keyword
-      fanout on the name-generator universe first, then build hub + ~10–15 variants.
+### Batch 4 — Name-generator cluster (research DONE → seo/name-keywords.md)
+Build on a shared NameEngine component (dataset-driven) so all share one engine.
+**Phase 4a — core + biggest easy wins:**
+- [ ] random-name-generator (HUB, realistic first+last by gender) — KD 25 · 201K/mo
+- [ ] fantasy-name-generator (people + places: town/city/kingdom) — KD 20 · 135K/mo
+- [ ] last-name-generator (surnames by origin) — KD 9 · 40.5K/mo
+- [ ] dnd-name-generator (by race/class) — KD 0 · 18.1K/mo
+- [ ] elf-name-generator — KD 5 · 18.1K/mo
+- [ ] superhero-name-generator — KD 4 · 14.8K/mo
+- [ ] gamertag-generator — KD 0 · 14.8K/mo
+**Phase 4b — more themed:**
+- [ ] band (KD9·12.1K), rapper (KD0·12.1K), city/town (KD0·8.1K), villain (KD0·3.6K),
+      dog (KD2·3.6K), cat (KD0·2.4K), couple/ship-name (KD0·2.4K), pet (KD0·1.6K)
+- [ ] nickname-generator (KD37·22.2K) + KD-0 variants (rapper/viking/anime/korean/team nickname)
+**Skip:** business-name (KD 77, owned by Shopify/Namelix/Wix) · baby names (YMYL, nameberry/babycenter own it)
 
 ### Deferred — Google widgets / brand-owned SERPs (low ROI for now)
 - [ ] Wheel of Names — 1.2M/mo but SERP owned by wheelofnames.com (needs real interactive wheel)
