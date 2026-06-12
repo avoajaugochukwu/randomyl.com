@@ -5,6 +5,7 @@ import { Header } from "@/components/common/Header";
 import { Footer } from "@/components/common/Footer";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { metadata, jsonLd } from "./metadata";
+import { buildSearchIndex } from "@/lib/search";
 
 const instrumentSerif = Instrument_Serif({
   variable: "--font-instrument-serif",
@@ -35,6 +36,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const searchIndex = buildSearchIndex();
   return (
     <html lang="en" suppressHydrationWarning>
       <body
@@ -45,7 +47,7 @@ export default function RootLayout({
           spaceMono.variable
         )}
       >
-        <Header />
+        <Header searchIndex={searchIndex} />
         <main className="flex-grow">{children}</main>
         <Footer />
         <script

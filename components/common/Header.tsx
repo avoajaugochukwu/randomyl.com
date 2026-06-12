@@ -2,6 +2,8 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import HeaderSearch from '@/components/common/HeaderSearch';
+import type { SearchItem } from '@/lib/search';
 
 const links = [
   { href: '/', label: 'Home', match: (p: string) => p === '/' },
@@ -9,7 +11,7 @@ const links = [
   { href: '/blog', label: 'Blog', match: (p: string) => p.startsWith('/blog') },
 ];
 
-export function Header() {
+export function Header({ searchIndex }: { searchIndex: SearchItem[] }) {
   const pathname = usePathname();
 
   return (
@@ -29,6 +31,7 @@ export function Header() {
               {link.label}
             </Link>
           ))}
+          <HeaderSearch index={searchIndex} />
           <Link className="btn btn-accent btn-sm nav-cta" href="/tools">
             Open a tool <span className="arr">→</span>
           </Link>
