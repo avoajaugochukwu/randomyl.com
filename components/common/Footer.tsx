@@ -77,6 +77,13 @@ export function Footer() {
             RIGHTS RESERVED
           </span>
           <span>BUILT FOR BUSINESSES, FREELANCERS &amp; PROFESSIONALS</span>
+          <span>
+            BUILT BY{' '}
+            <a href="https://bottta.com/" target="_blank" rel="noopener">
+              bottta
+            </a>{' '}
+            — AUTOMATION STUDIO
+          </span>
         </div>
       </div>
     </footer>
