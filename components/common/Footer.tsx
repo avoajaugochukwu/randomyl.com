@@ -78,11 +78,11 @@ export function Footer() {
           </span>
           <span>BUILT FOR BUSINESSES, FREELANCERS &amp; PROFESSIONALS</span>
           <span>
-            BUILT BY{' '}
+            A{' '}
             <a href="https://bottta.com/" target="_blank" rel="noopener">
               bottta
             </a>{' '}
-            — AUTOMATION STUDIO
+            PROJECT
           </span>
         </div>
       </div>
