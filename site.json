@@ -1,7 +1,20 @@
 {
   "domain": "randomyl.com",
-  "subdomains": ["@", "www"],
-  "github": { "repo": "avoajaugochukwu/randomyl.com" },
-  "analytics": { "measurementId": "G-6M5JV3JERT" },
-  "cloudflare": { "workerName": "randomyl-com" }
+  "subdomains": [
+    "@",
+    "www"
+  ],
+  "github": {
+    "repo": "avoajaugochukwu/randomyl.com"
+  },
+  "analytics": {
+    "measurementId": "G-6M5JV3JERT"
+  },
+  "cloudflare": {
+    "workerName": "randomyl-com",
+    "scriptTag": "556768dbf41544e2bbb3c7d563837a63",
+    "triggerUuid": "6877b74b-2bf6-49c6-a764-8b5b73c70a0c",
+    "workersDev": "randomyl-com.avoajacharles.workers.dev",
+    "releaseHook": true
+  }
 }
