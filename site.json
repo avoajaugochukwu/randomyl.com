@@ -1,0 +1,7 @@
+{
+  "domain": "randomyl.com",
+  "subdomains": ["@", "www"],
+  "github": { "repo": "avoajaugochukwu/randomyl.com" },
+  "analytics": { "measurementId": "G-6M5JV3JERT" },
+  "cloudflare": { "workerName": "randomyl-com" }
+}

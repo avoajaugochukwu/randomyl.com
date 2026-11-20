@@ -1,9 +1,5 @@
-import { OpenAI } from 'openai';
+import { getOpenAI, CHAT_MODEL } from '@/lib/openai';
 import { NextResponse } from 'next/server';
-
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
-});
 
 export async function POST(req: Request) {
   try {
@@ -31,8 +27,8 @@ export async function POST(req: Request) {
 
     systemPrompt += ` Return only the generated values, one per line, without any additional text or explanations.`;
 
-    const response = await openai.chat.completions.create({
-      model: "gpt-4",
+    const response = await getOpenAI().chat.completions.create({
+      model: CHAT_MODEL,
       messages: [
         {
           role: "system",

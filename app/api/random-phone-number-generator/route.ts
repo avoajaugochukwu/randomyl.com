@@ -1,9 +1,5 @@
-import { OpenAI } from 'openai';
+import { getOpenAI, CHAT_MODEL } from '@/lib/openai';
 import { NextResponse } from 'next/server';
-
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY
-});
 
 const SYSTEM_PROMPT = `You are a phone number generation assistant. Generate phone numbers based on user requests following these rules:
 
@@ -43,8 +39,8 @@ export async function POST(req: Request) {
       );
     }
 
-    const completion = await openai.chat.completions.create({
-      model: "gpt-4-turbo-preview",
+    const completion = await getOpenAI().chat.completions.create({
+      model: CHAT_MODEL,
       messages: [
         { role: "system", content: SYSTEM_PROMPT },
         { role: "user", content: prompt }

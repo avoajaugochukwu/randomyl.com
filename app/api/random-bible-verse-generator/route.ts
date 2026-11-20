@@ -1,15 +1,11 @@
 import { NextResponse } from 'next/server';
-import OpenAI from 'openai';
-
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
-});
+import { getOpenAI, CHAT_MODEL } from '@/lib/openai';
 
 export async function POST(req: Request) {
   try {
     const { prompt, translation } = await req.json();
 
-    const completion = await openai.chat.completions.create({
+    const completion = await getOpenAI().chat.completions.create({
       messages: [
         {
           role: "system",
@@ -44,7 +40,7 @@ export async function POST(req: Request) {
           content: prompt
         }
       ],
-      model: "gpt-3.5-turbo-1106",
+      model: CHAT_MODEL,
       response_format: { type: "json_object" },
       temperature: 0.7,
     });

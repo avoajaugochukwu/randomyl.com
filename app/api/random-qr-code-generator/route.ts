@@ -1,10 +1,6 @@
-import { OpenAI } from 'openai';
+import { getOpenAI, CHAT_MODEL } from '@/lib/openai';
 import { NextResponse } from 'next/server';
 import QRCode from 'qrcode';
-
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
-});
 
 export async function POST(req: Request) {
   try {
@@ -18,8 +14,8 @@ export async function POST(req: Request) {
 
     systemPrompt += `. For URLs, ensure they start with http:// or https://. For contact info, use vCard format. For WiFi, use WiFi URI scheme.`;
 
-    const completion = await openai.chat.completions.create({
-      model: "gpt-4",
+    const completion = await getOpenAI().chat.completions.create({
+      model: CHAT_MODEL,
       messages: [
         {
           role: "system",
